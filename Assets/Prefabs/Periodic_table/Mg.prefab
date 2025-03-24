@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3428547564657270720}
   - component: {fileID: 39470480149400473}
   - component: {fileID: 5069819158643132925}
+  - component: {fileID: 2234470996151969113}
   m_Layer: 0
   m_Name: Mg
   m_TagString: Untagged
@@ -109,7 +110,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2234470996151969113}
+        m_TargetAssemblyTypeName: Table_Select, Assembly-CSharp
+        m_MethodName: OnSelectEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -205,6 +218,42 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9191733, y: 0.07017483, z: 0.97822356}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2234470996151969113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815953883454031621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c06ffa4c43adad498dac43a1f1ca5b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_Handedness: 0
+  m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  Prefabs: {fileID: 3348150523819346926, guid: aec13f9123ee5de4ab859627705e3a1a, type: 3}
 --- !u!1001 &67116681042096727
 PrefabInstance:
   m_ObjectHideFlags: 0
