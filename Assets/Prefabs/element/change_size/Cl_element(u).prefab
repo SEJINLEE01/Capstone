@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 697333214859200227, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2123
+      value: 1.075952
       objectReference: {fileID: 0}
     - target: {fileID: 697333214859200227, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 697333214859200227, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.1744442
       objectReference: {fileID: 0}
     - target: {fileID: 697333214859200227, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60,9 +60,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3873721558017413316, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74916ac93a148414bbeaa80a8327dfca, type: 2}
+    - target: {fileID: 3873721558017413316, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74916ac93a148414bbeaa80a8327dfca, type: 2}
+    - target: {fileID: 3873721558017413316, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74916ac93a148414bbeaa80a8327dfca, type: 2}
+    - target: {fileID: 3873721558017413316, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74916ac93a148414bbeaa80a8327dfca, type: 2}
+    - target: {fileID: 3873721558017413316, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 263db6d5ead4eeb40bb641ff0008d4d1, type: 2}
     - target: {fileID: 6856082682717502175, guid: fad8463c9abf70b4a80fd52299bdf704, type: 3}
       propertyPath: m_Name
-      value: Cl_element Variant
+      value: Cl_element(u)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
