@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6923338534940784552}
   - component: {fileID: 6135366863681397276}
   - component: {fileID: 3000150779873954262}
-  - component: {fileID: 6790089195178953148}
+  - component: {fileID: 154681006957750922}
   m_Layer: 0
   m_Name: Electron
   m_TagString: Untagged
@@ -211,7 +211,7 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &6790089195178953148
+--- !u!114 &154681006957750922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,12 +220,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7028148273734220929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626cc20adf316c046bbb626675e5c4fa, type: 3}
+  m_Script: {fileID: 11500000, guid: fd8672dcd59415246b43e087b1eff927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 1, y: 1, z: 0}
   Element: {fileID: 1003339223674703183}
   speed: 30
+  direction: {x: 1, y: 1, z: 0}
 --- !u!1 &8031127334683161622
 GameObject:
   m_ObjectHideFlags: 0
