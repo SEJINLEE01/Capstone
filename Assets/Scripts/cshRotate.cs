@@ -6,10 +6,9 @@ public class cshRotate : MonoBehaviour
 {
     public Transform Element;
     public float speed;
-    public Vector3 direction;
 
     private void Update()
     {
-        transform.RotateAround(Element.position, direction, speed * Time.deltaTime);
+        transform.RotateAround(Element.position, Element.up, speed * Time.deltaTime);
     }
 }
