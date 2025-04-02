@@ -225,7 +225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &1482118461799144395
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +450,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &1488683510021656365
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +708,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 30
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &3184752143234857681
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +933,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 30
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &4082563923562414281
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +962,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7100497816173948735}
@@ -1269,7 +1265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &4193410266241578357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1490,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &4520023168080686387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1754,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &6038064032157430080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +1979,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &7463735937575956570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,7 +2204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &8293662278191585987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,4 +2429,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 8662618400516306518}
   speed: 20
-  direction: {x: 0, y: 1, z: 0}
