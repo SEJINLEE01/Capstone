@@ -13,10 +13,6 @@ public class UImove : MonoBehaviour
         NextUI.SetActive(true);
     }
 
-    public void goMain()
-    {
-        MainUI.SetActive(true);
-        NextUI.SetActive(false);
-    }
+ 
 }
 
