@@ -686,6 +686,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4036689804855167870}
     m_Modifications:
+    - target: {fileID: 267155837814198732, guid: daa7e5ec6bb793246b9eebb231c2da87,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1127832436200463622, guid: daa7e5ec6bb793246b9eebb231c2da87,
         type: 3}
       propertyPath: m_Pivot.x
@@ -790,6 +795,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Holo_Periodic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490373465999888879, guid: daa7e5ec6bb793246b9eebb231c2da87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215477736665971326, guid: daa7e5ec6bb793246b9eebb231c2da87,
+        type: 3}
+      propertyPath: _transferOnSecondSelection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
