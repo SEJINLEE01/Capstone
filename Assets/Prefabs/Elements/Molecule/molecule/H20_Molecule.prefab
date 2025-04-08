@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 6601207218895454563}
   - component: {fileID: 4844955953134505237}
   m_Layer: 0
-  m_Name: H20_Molecule(ex)
+  m_Name: H20_Molecule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,6 +417,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: O
       objectReference: {fileID: 0}
+    - target: {fileID: 7036524655134822008, guid: 1b10c2eb6223cb548b60b27d9aa83d74,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036524655134822008, guid: 1b10c2eb6223cb548b60b27d9aa83d74,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7239467934836442612, guid: 1b10c2eb6223cb548b60b27d9aa83d74,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -578,6 +588,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 705505825b024854695aa35aa7a8dd9a, type: 2}
+    - target: {fileID: 5542573623242294481, guid: 2997e5295cfef33438872ac1d0d16dd6,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542573623242294481, guid: 2997e5295cfef33438872ac1d0d16dd6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2250983036925145980, guid: 2997e5295cfef33438872ac1d0d16dd6, type: 3}
@@ -674,6 +694,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 705505825b024854695aa35aa7a8dd9a, type: 2}
+    - target: {fileID: 5542573623242294481, guid: 2997e5295cfef33438872ac1d0d16dd6,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542573623242294481, guid: 2997e5295cfef33438872ac1d0d16dd6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2250983036925145980, guid: 2997e5295cfef33438872ac1d0d16dd6, type: 3}
