@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1290944090001820528}
   - component: {fileID: 6703683490064005878}
   - component: {fileID: 1483231180329258575}
-  - component: {fileID: 8681957770955946660}
+  - component: {fileID: 8525594131518574639}
   m_Layer: 0
   m_Name: Spawn_Holo_pose(Test)
   m_TagString: Untagged
@@ -84,8 +84,11 @@ MonoBehaviour:
   _transformFeatureConfigs:
     _values:
     - _mode: 0
-      _feature: 0
-      _state: 0
+      _feature: 4
+      _state: 12
+    - _mode: 0
+      _feature: 6
+      _state: 18
   _transformConfig:
     PositionOffset: {x: 0, y: 0, z: 0}
     RotationOffset: {x: 0, y: 0, z: 0}
@@ -137,10 +140,10 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8681957770955946660}
-        m_TargetAssemblyTypeName: Log, Assembly-CSharp
-        m_MethodName: OnLog
-        m_Mode: 5
+      - m_Target: {fileID: 8525594131518574639}
+        m_TargetAssemblyTypeName: SpawnHolo, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -152,10 +155,10 @@ MonoBehaviour:
   _whenUnselected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8681957770955946660}
-        m_TargetAssemblyTypeName: Log, Assembly-CSharp
-        m_MethodName: OnLog
-        m_Mode: 5
+      - m_Target: {fileID: 8525594131518574639}
+        m_TargetAssemblyTypeName: SpawnHolo, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -164,7 +167,7 @@ MonoBehaviour:
           m_StringArgument: Pose inactive
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8681957770955946660
+--- !u!114 &8525594131518574639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,3 +179,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0252ad03a1fa44796be4c9d0475233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Holo: {fileID: 6490373465999888879, guid: daa7e5ec6bb793246b9eebb231c2da87, type: 3}
