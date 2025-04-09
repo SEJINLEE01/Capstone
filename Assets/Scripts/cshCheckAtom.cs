@@ -4,87 +4,90 @@ using UnityEngine;
 
 public class cshCheckAtom : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class ElementData
     {
-        
+        public string tagName; // 원소 태그 이름
+        public GameObject canvasPrefab;
+        public Transform canvasPos;
+        public GameObject periodPrefab;
+        public Transform periodPos;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public GameObject canvasPrefab; // 인스펙터에서 할당할 Canvas 프리팹
-    private GameObject spawnedCanvas; // 생성된 캔버스를 추적하기 위한 변수
-    public Transform CanvasPos;//canvas 생성 위치
+    public List<ElementData> elements = new List<ElementData>(); // 20개 저장할 리스트
 
-    public GameObject PeriodPrefab; // 인스펙터에서 할당할 Period 프리팹
-    private GameObject spawnedPeriod; // 생성된 Period를 추적하기 위한 변수
-    public Transform PeriodPos; // Period 생성 위치
+    private Dictionary<string, GameObject> spawnedCanvasDict = new Dictionary<string, GameObject>();
+    private Dictionary<string, GameObject> spawnedPeriodDict = new Dictionary<string, GameObject>();
 
     void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.CompareTag("H"))
+        foreach (var element in elements)
         {
-            InstantiateCanvas(); // 캔버스 생성
-            InstantiatePeriod(); // PeriodPrefab 생성
+            if (coll.gameObject.CompareTag(element.tagName))
+            {
+                InstantiateCanvas(element);
+                InstantiatePeriod(element);
+            }
         }
     }
 
     void OnCollisionExit(Collision coll)
     {
-        if (coll.gameObject.CompareTag("H"))
+        foreach (var element in elements)
         {
-            DestroyCanvas(); // 캔버스 삭제
-            DestroyPeriod(); // PeriodPrefab 삭제
+            if (coll.gameObject.CompareTag(element.tagName))
+            {
+                DestroyCanvas(element.tagName);
+                DestroyPeriod(element.tagName);
+            }
         }
     }
 
-    void InstantiateCanvas()
+    void InstantiateCanvas(ElementData element)
     {
-        if (canvasPrefab != null)
+        if (element.canvasPrefab != null && element.canvasPos != null)
         {
-            spawnedCanvas = Instantiate(canvasPrefab,CanvasPos.position, CanvasPos.rotation); // 프리팹을 생성
-            Debug.Log("Canvas 프리팹 생성 완료!");
+            GameObject canvas = Instantiate(element.canvasPrefab, element.canvasPos.position, element.canvasPos.rotation);
+            spawnedCanvasDict[element.tagName] = canvas;
+            Debug.Log(element.tagName + " Canvas 생성 완료!");
         }
         else
         {
-            Debug.LogWarning("canvasPrefab이 할당되지 않았습니다!");
+            Debug.LogWarning(element.tagName + " : canvasPrefab 또는 canvasPos가 할당되지 않았습니다!");
         }
     }
 
-    void DestroyCanvas()
+    void DestroyCanvas(string tagName)
     {
-        if (spawnedCanvas != null)
+        if (spawnedCanvasDict.ContainsKey(tagName) && spawnedCanvasDict[tagName] != null)
         {
-            Destroy(spawnedCanvas); // 생성된 캔버스를 삭제
-            spawnedCanvas = null; // 변수 초기화
-            Debug.Log("Canvas 제거 완료!");
+            Destroy(spawnedCanvasDict[tagName]);
+            spawnedCanvasDict[tagName] = null;
+            Debug.Log(tagName + " Canvas 제거 완료!");
         }
     }
 
-    void InstantiatePeriod()
+    void InstantiatePeriod(ElementData element)
     {
-        if (PeriodPrefab != null && PeriodPos != null)
+        if (element.periodPrefab != null && element.periodPos != null)
         {
-            spawnedPeriod = Instantiate(PeriodPrefab, PeriodPos.position, PeriodPos.rotation);
-            Debug.Log("PeriodPrefab 생성 완료!");
+            GameObject period = Instantiate(element.periodPrefab, element.periodPos.position, element.periodPos.rotation);
+            spawnedPeriodDict[element.tagName] = period;
+            Debug.Log(element.tagName + " PeriodPrefab 생성 완료!");
         }
         else
         {
-            Debug.LogWarning("PeriodPrefab 또는 PeriodPos가 할당되지 않았습니다!");
+            Debug.LogWarning(element.tagName + " : periodPrefab 또는 periodPos가 할당되지 않았습니다!");
         }
     }
 
-    void DestroyPeriod()
+    void DestroyPeriod(string tagName)
     {
-        if (spawnedPeriod != null)
+        if (spawnedPeriodDict.ContainsKey(tagName) && spawnedPeriodDict[tagName] != null)
         {
-            Destroy(spawnedPeriod);
-            spawnedPeriod = null;
-            Debug.Log("PeriodPrefab 제거 완료!");
+            Destroy(spawnedPeriodDict[tagName]);
+            spawnedPeriodDict[tagName] = null;
+            Debug.Log(tagName + " PeriodPrefab 제거 완료!");
         }
     }
-
 }
