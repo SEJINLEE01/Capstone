@@ -18,15 +18,17 @@ public class cshCheckAtom : MonoBehaviour
 
     private Dictionary<string, GameObject> spawnedCanvasDict = new Dictionary<string, GameObject>();
     private Dictionary<string, GameObject> spawnedPeriodDict = new Dictionary<string, GameObject>();
+    bool isCheck = false;
 
     void OnCollisionEnter(Collision coll)
     {
         foreach (var element in elements)
         {
-            if (coll.gameObject.CompareTag(element.tagName))
+            if (coll.gameObject.CompareTag(element.tagName) && !isCheck)
             {
                 InstantiateCanvas(element);
                 InstantiatePeriod(element);
+                isCheck = true;
             }
         }
     }
@@ -41,6 +43,7 @@ public class cshCheckAtom : MonoBehaviour
                 DestroyPeriod(element.tagName);
             }
         }
+        isCheck = false;
     }
 
     void InstantiateCanvas(ElementData element)
