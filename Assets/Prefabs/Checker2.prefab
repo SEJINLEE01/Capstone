@@ -191,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 3043979779180868818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.09, y: 1.8000001, z: 0}
+  m_LocalPosition: {x: -4.09, y: 2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,10 +430,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41f99687b6e44e449b146c1650a8d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasPrefab: {fileID: 3648075117360857222, guid: abf18c1b19b7c47499f99fff1e3c6eee,
+  canvasPrefabH: {fileID: 3648075117360857222, guid: abf18c1b19b7c47499f99fff1e3c6eee,
     type: 3}
   CanvasPos: {fileID: 767739950967537290}
-  PeriodPrefab: {fileID: 8031127334683161622, guid: 06e2b248d6d24ff4bab95f21b84507e1,
+  PeriodPrefabH: {fileID: 8031127334683161622, guid: 06e2b248d6d24ff4bab95f21b84507e1,
     type: 3}
   PeriodPos: {fileID: 2820180197283549061}
 --- !u!65 &4985241526445923445
