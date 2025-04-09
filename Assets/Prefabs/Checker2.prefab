@@ -430,12 +430,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41f99687b6e44e449b146c1650a8d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasPrefabH: {fileID: 3648075117360857222, guid: abf18c1b19b7c47499f99fff1e3c6eee,
-    type: 3}
-  CanvasPos: {fileID: 767739950967537290}
-  PeriodPrefabH: {fileID: 8031127334683161622, guid: 06e2b248d6d24ff4bab95f21b84507e1,
-    type: 3}
-  PeriodPos: {fileID: 2820180197283549061}
+  canvasPos: {fileID: 767739950967537290}
+  periodPos: {fileID: 2820180197283549061}
+  elements:
+  - tagName: H
+    canvasPrefab: {fileID: 3648075117360857222, guid: abf18c1b19b7c47499f99fff1e3c6eee,
+      type: 3}
+    periodPrefab: {fileID: 8031127334683161622, guid: 06e2b248d6d24ff4bab95f21b84507e1,
+      type: 3}
+  - tagName: He
+    canvasPrefab: {fileID: 4655277686008445921, guid: 4192934199c3cd84e9a1de4037b02c2d,
+      type: 3}
+    periodPrefab: {fileID: 2355828282626924598, guid: 00aebb7cdb1716b43bbddb832f5de8c5,
+      type: 3}
+  - tagName: Li
+    canvasPrefab: {fileID: 7623902066804734744, guid: ee47accd2b38c2d40af1d1e114153b86,
+      type: 3}
+    periodPrefab: {fileID: 3066888678158344499, guid: 5b0e2bd68c6cd2043a7fc62d4b08d475,
+      type: 3}
+  - tagName: Be
+    canvasPrefab: {fileID: 8546427652112547460, guid: aab2ba7e20b275a4ab830bced8ba4d4a,
+      type: 3}
+    periodPrefab: {fileID: 6850626386872142599, guid: b77e230d49cfdf34b87bc6ffe4b0779c,
+      type: 3}
+  - tagName: B
+    canvasPrefab: {fileID: 9214015526416411981, guid: 4bab0ece96c804946bc19bec8a8d38d6,
+      type: 3}
+    periodPrefab: {fileID: 5756869929536161484, guid: e9f81fe7f98088d4da1bb8720288e8d7,
+      type: 3}
+  - tagName: C
+    canvasPrefab: {fileID: 8267666295735902381, guid: 4900da87fedd1cd45bf1989710a0a4c6,
+      type: 3}
+    periodPrefab: {fileID: 989435150462431441, guid: eeebbd8c25cf58f49a1495cb1b465961,
+      type: 3}
+  - tagName: N
+    canvasPrefab: {fileID: 8187090399449440383, guid: 7f0cbcdba0c762b48a46692941308378,
+      type: 3}
+    periodPrefab: {fileID: 76655109415558490, guid: 9b7dc41a3c676174f9b0caeae35180ee,
+      type: 3}
+  - tagName: O
+    canvasPrefab: {fileID: 7521369091648845384, guid: 42d9fe920cd335f46badca94044ad01f,
+      type: 3}
+    periodPrefab: {fileID: 1170876663602715401, guid: 1cb8466ef9f2c1145b2de21973094af3,
+      type: 3}
+  - tagName: F
+    canvasPrefab: {fileID: 7136174480895836719, guid: ed926abd36ce36248824f0916b5b8e09,
+      type: 3}
+    periodPrefab: {fileID: 5652106045186652224, guid: ecdcac4c5d515f240ac66951b0b371be,
+      type: 3}
+  - tagName: Ne
+    canvasPrefab: {fileID: 6638218158035299864, guid: 687e3bf5a8a68f24286a062bb7f6dba3,
+      type: 3}
+    periodPrefab: {fileID: 4082563923562414281, guid: 7ac0b278e3a64b245b8ba392655d1122,
+      type: 3}
+  - tagName: Na
+    canvasPrefab: {fileID: 627037030622040988, guid: 95315542ca13c2749ac4240a642c8dd9,
+      type: 3}
+    periodPrefab: {fileID: 6316140876331230728, guid: bce9562f4dae733429c93418715c4a25,
+      type: 3}
+  - tagName: Mg
+    canvasPrefab: {fileID: 6470698076592201670, guid: d8fef20c9a310e642a7eb1d9c2ab59e0,
+      type: 3}
+    periodPrefab: {fileID: 1598836090297778014, guid: 6cd3064baca83bc418a5cbc7a733c117,
+      type: 3}
+  - tagName: Al
+    canvasPrefab: {fileID: 2902371225193092749, guid: 7024c186806cada4cb56aa5209022be5,
+      type: 3}
+    periodPrefab: {fileID: 167089777228893111, guid: dbf903c80eeb4864cac0d62778ec38fa,
+      type: 3}
+  - tagName: Si
+    canvasPrefab: {fileID: 2083844230286616823, guid: 1c059f7ce2d6c0447b579d47f1bf56eb,
+      type: 3}
+    periodPrefab: {fileID: 352430225214259561, guid: 4e7d6d2e19ec4604281fdf4f11f178a1,
+      type: 3}
+  - tagName: P
+    canvasPrefab: {fileID: 8161708597225974742, guid: 431a4b3eff0c4d04d83598189659f1cb,
+      type: 3}
+    periodPrefab: {fileID: 5746850325814170506, guid: e449e8ecec2d5984e8a083124ff9a326,
+      type: 3}
+  - tagName: S
+    canvasPrefab: {fileID: 1275507290849760675, guid: 9ec7c41af4f4d9e40b12eb47471acc42,
+      type: 3}
+    periodPrefab: {fileID: 2703177040603657502, guid: 743b9853fd48f78449a49fbd5d066562,
+      type: 3}
+  - tagName: Cl
+    canvasPrefab: {fileID: 7231152907613850941, guid: 3a4842986f22a0642bbea5c8dc48b2b2,
+      type: 3}
+    periodPrefab: {fileID: 6734338399409823009, guid: 776a49d109dc674459ecdaa948041768,
+      type: 3}
+  - tagName: Ar
+    canvasPrefab: {fileID: 7757158873483665950, guid: 926c7275d9022044b92e800de02f020c,
+      type: 3}
+    periodPrefab: {fileID: 8637667062054433337, guid: 8de5f54c3f147fb45a5032d243e95867,
+      type: 3}
+  - tagName: K
+    canvasPrefab: {fileID: 6959132186584296151, guid: ece79e8fef27bb845835b328fe3706f0,
+      type: 3}
+    periodPrefab: {fileID: 2090310115882344519, guid: 8f045f5b77a6a8e489709bd6015ada14,
+      type: 3}
+  - tagName: Ca
+    canvasPrefab: {fileID: 5224840723396541477, guid: 2898a96d48b548f4aa8754210425e3fe,
+      type: 3}
+    periodPrefab: {fileID: 3562243791146479995, guid: e106892478c08f045897bb28d25b916f,
+      type: 3}
 --- !u!65 &4985241526445923445
 BoxCollider:
   m_ObjectHideFlags: 0

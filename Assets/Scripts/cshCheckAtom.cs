@@ -9,10 +9,12 @@ public class cshCheckAtom : MonoBehaviour
     {
         public string tagName; // 원소 태그 이름
         public GameObject canvasPrefab;
-        public Transform canvasPos;
+        
         public GameObject periodPrefab;
-        public Transform periodPos;
+        
     }
+    public Transform canvasPos;
+    public Transform periodPos;
 
     public List<ElementData> elements = new List<ElementData>(); // 20개 저장할 리스트
 
@@ -48,9 +50,9 @@ public class cshCheckAtom : MonoBehaviour
 
     void InstantiateCanvas(ElementData element)
     {
-        if (element.canvasPrefab != null && element.canvasPos != null)
+        if (element.canvasPrefab != null && canvasPos != null)
         {
-            GameObject canvas = Instantiate(element.canvasPrefab, element.canvasPos.position, element.canvasPos.rotation);
+            GameObject canvas = Instantiate(element.canvasPrefab, canvasPos.position, canvasPos.rotation);
             spawnedCanvasDict[element.tagName] = canvas;
             Debug.Log(element.tagName + " Canvas 생성 완료!");
         }
@@ -72,9 +74,9 @@ public class cshCheckAtom : MonoBehaviour
 
     void InstantiatePeriod(ElementData element)
     {
-        if (element.periodPrefab != null && element.periodPos != null)
+        if (element.periodPrefab != null && periodPos != null)
         {
-            GameObject period = Instantiate(element.periodPrefab, element.periodPos.position, element.periodPos.rotation);
+            GameObject period = Instantiate(element.periodPrefab, periodPos.position, periodPos.rotation);
             spawnedPeriodDict[element.tagName] = period;
             Debug.Log(element.tagName + " PeriodPrefab 생성 완료!");
         }
