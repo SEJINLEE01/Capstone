@@ -9,6 +9,7 @@ public class Molcule_Trigger : MonoBehaviour
     int count = 0;
     public Transform[] ToObj;
     public Transform[] FromObj;
+    public float DelayTime;
     List<Vector3> direction;
     private float speed=0.25f;
     [HideInInspector]
@@ -78,7 +79,7 @@ public class Molcule_Trigger : MonoBehaviour
                 }
                 for (int i = 0; i < ToObj.Length; i++)
                 {
-                    FromObj[i].Translate(direction[i] * speed * Time.deltaTime);
+                    FromObj[i].Translate(direction[i] * speed * Time.deltaTime, Space.World);
                 }
             }
             else
@@ -90,7 +91,7 @@ public class Molcule_Trigger : MonoBehaviour
 
     IEnumerator DelayRoutine()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(DelayTime);
         isActive = true;
     }
 }
