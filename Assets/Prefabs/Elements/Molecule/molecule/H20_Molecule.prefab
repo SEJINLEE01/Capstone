@@ -417,6 +417,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: O
       objectReference: {fileID: 0}
+    - target: {fileID: 4475015556983532768, guid: 1b10c2eb6223cb548b60b27d9aa83d74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7036524655134822008, guid: 1b10c2eb6223cb548b60b27d9aa83d74,
         type: 3}
       propertyPath: m_UseGravity
@@ -583,6 +588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3081930887644415563, guid: 2997e5295cfef33438872ac1d0d16dd6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5496314055790636084, guid: 2997e5295cfef33438872ac1d0d16dd6,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -688,6 +698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: H
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081930887644415563, guid: 2997e5295cfef33438872ac1d0d16dd6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5496314055790636084, guid: 2997e5295cfef33438872ac1d0d16dd6,
         type: 3}

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1538574618071428517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.378, y: 0.102, z: -11.378}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -218,6 +218,7 @@ MonoBehaviour:
   Trigger: {fileID: 6210353046193894173}
   electrons:
   - {fileID: 2955162300749465859}
+  Degree: 0
   OnTarget: 0
 --- !u!1 &3679600335510889042
 GameObject:
@@ -261,7 +262,7 @@ TrailRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3679600335510889042}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -519,7 +520,7 @@ TrailRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6910597229791640865}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -766,6 +767,7 @@ MonoBehaviour:
   Trigger: {fileID: 6210353046193894173}
   electrons:
   - {fileID: 7781553625358398150}
+  Degree: 0
   OnTarget: 1
 --- !u!1 &7965688165793349723
 GameObject:
