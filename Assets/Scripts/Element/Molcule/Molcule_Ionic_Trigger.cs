@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 
 public class Molcule_Ionic_Trigger : MonoBehaviour
@@ -10,8 +11,8 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
     public Transform[] ToObj;
     public Transform[] FromObj;
     public float DelayTime;
-    List<Vector3> direction;
-    private float speed = 0.25f;
+    
+    public float speed;
     [HideInInspector]
     public bool isTrigger = false;
     [HideInInspector]
@@ -24,14 +25,7 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
     private float elapsedTime = 0f; // 경과 시간
     public float duration; // 이동 시간 (1초)
     bool isMoving = true;
-    private void Start()
-    {
-        direction = new List<Vector3>();
-        for (int i = 0; i < ToObj.Length; i++)
-        {
-            direction.Add((ToObj[i].position - FromObj[i].position).normalized);
-        }
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
         foreach (var atom in Atom)
@@ -84,7 +78,12 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
                 }
                 for (int i = 0; i < ToObj.Length; i++)
                 {
-                    FromObj[i].Translate(direction[i] * speed * Time.deltaTime, Space.World);
+                    Vector3 direction = ToObj[i].position - FromObj[i].position;
+                    float distance = direction.magnitude;
+                    direction.Normalize();
+
+                    float Strength = speed / (distance * distance);
+                    FromObj[i].Translate(direction* Strength * Time.deltaTime, Space.World);
                 }
             }
             else
