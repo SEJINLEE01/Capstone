@@ -24,6 +24,7 @@ public class cshCheckAtom : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
+        Debug.Log("충돌된 오브젝트 이름: " + coll.gameObject.name);
         foreach (var element in elements)
         {
             if (coll.gameObject.CompareTag(element.tagName) && !isCheck)
@@ -47,6 +48,36 @@ public class cshCheckAtom : MonoBehaviour
         }
         isCheck = false;
     }
+    void OnTriggerEnter(Collider other)
+    {
+        // 충돌된 오브젝트 이름을 콘솔에 출력
+        Debug.Log("트리거 충돌된 오브젝트 이름: " + other.gameObject.name);
+
+        // 원소 리스트를 반복하여, 충돌한 오브젝트의 태그와 일치하는 원소가 있으면 작업을 진행
+        foreach (var element in elements)
+        {
+            if (other.gameObject.CompareTag(element.tagName) && !isCheck)
+            {
+                // 해당 원소에 맞는 캔버스 및 주기 인스턴스를 생성
+                InstantiateCanvas(element);
+                InstantiatePeriod(element);
+                isCheck = true;
+            }
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        foreach (var element in elements)
+        {
+            if (other.gameObject.CompareTag(element.tagName))
+            {
+                DestroyCanvas(element.tagName);
+                DestroyPeriod(element.tagName);
+            }
+        }
+        isCheck = false;
+    }
+
 
     void InstantiateCanvas(ElementData element)
     {
