@@ -558,7 +558,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3774101310645562906}
   - component: {fileID: 789722866604101217}
-  - component: {fileID: 6939951365394671442}
   m_Layer: 0
   m_Name: CO2_Molecule
   m_TagString: Untagged
@@ -616,24 +615,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6939951365394671442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4394704004969344706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f3ebe20ed43294da52c0e061ceae56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  molcules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  molcule: {fileID: 0}
-  Effect: {fileID: 1268872284117000228, guid: edcdb93121a0c264ba6b7bc5c537c774, type: 3}
 --- !u!1001 &3889744970483500883
 PrefabInstance:
   m_ObjectHideFlags: 0
