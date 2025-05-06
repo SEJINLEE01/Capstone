@@ -451,7 +451,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1263794874624199827}
   - component: {fileID: 272164939456255212}
-  - component: {fileID: 6267250739900512975}
   m_Layer: 0
   m_Name: CH4_Molecule
   m_TagString: Untagged
@@ -511,24 +510,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6267250739900512975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7957556866238901928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f3ebe20ed43294da52c0e061ceae56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  molcules:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  molcule: {fileID: 0}
-  Effect: {fileID: 1268872284117000228, guid: edcdb93121a0c264ba6b7bc5c537c774, type: 3}
 --- !u!1 &8503016910178261176
 GameObject:
   m_ObjectHideFlags: 0
