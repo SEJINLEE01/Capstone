@@ -112,8 +112,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -26.9}
-  m_SizeDelta: {x: 50, y: 60}
+  m_AnchoredPosition: {x: 0, y: -29.5}
+  m_SizeDelta: {x: 50, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3063840874516039168
 CanvasRenderer:
@@ -143,13 +143,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC601\uC5B4\uBA85 : methane\n\uC6D0\uC790\uB7C9 : \t16.043 g\xB7mol<sup>-1</sup>\n\uBC00\uB3C4
-    : 0.657 kg\xB7m<sup>-3</sup>(\uAE30\uCCB4, 25 \xB0C, 1 atm)\n0.717 kg\xB7m<sup>-3</sup>
-    (\uAE30\uCCB4, 0 \xB0C, 1 atm)\n422.62 g\xB7L<sup>-1</sup> (\uC561\uCCB4, \u2212162
-    \xB0C)\n\uC0C1\uD0DC : \uC0C1\uC628\uC5D0\uC11C rlcp\n\uACB0\uD569 \uC885\uB958
-    : \uACF5\uC720\uACB0\uD569 \n\uC6A9\uB3C4 : \uCC9C\uC5F0 \uAC00\uC2A4\uB098 \uC11D\uD0C4
-    \uAC00\uC2A4\uC758 \uC8FC\uC131\uBD84,\n\uACF5\uAE30\uC640 \uC11E\uC5EC \uD3ED\uBC1C\uC744
-    \uC77C\uC73C\uD0A4\uAE30\uB3C4 \uD568 "
+  m_text: "\uC601\uC5B4\uBA85 : methane\n\uBAB0 \uC9C8\uB7C9 : \t16.043 g/mol<sup>-1</sup>\n\uBC00\uB3C4
+    : 0.657 kg/m<sup>-3</sup>(\uAE30\uCCB4, 25 \xB0C, 1 atm)\n0.717 kg/m<sup>-3</sup>
+    (\uAE30\uCCB4, 0 \xB0C, 1 atm)\n422.62 g/L<sup>-1</sup> (\uC561\uCCB4, \u2212162
+    \xB0C)\n\uC0C1\uD0DC(\uC0C1\uC628) : \uBB34\uC0C9\uBB34\uCDE8 \uAE30\uCCB4 \n\uB053\uB294\uC810
+    : 111.65 K\n\uB179\uB294\uC810 : 90.7 K\n\uACB0\uD569 \uC885\uB958 : \uACF5\uC720\uACB0\uD569
+    \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f541433e775ca5746b0a0772855a96ab, type: 2}
   m_sharedMaterial: {fileID: 3872845492789283006, guid: f541433e775ca5746b0a0772855a96ab,
@@ -284,7 +283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBA54\uD14C\uC778-CH<sub>4<sub> "
+  m_text: "\uBA54\uD14C\uC778-CH<sub>4</sub> "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1e51ffaa58f8da4fa5bbbfe52362e6f, type: 2}
   m_sharedMaterial: {fileID: -5241709661901793275, guid: c1e51ffaa58f8da4fa5bbbfe52362e6f,
