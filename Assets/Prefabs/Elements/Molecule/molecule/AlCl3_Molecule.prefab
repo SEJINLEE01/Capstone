@@ -171,7 +171,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -183,8 +183,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -543,6 +543,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cl (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5229088813525880613, guid: 895b4fce45a736b469a187e26178f8e5,
+        type: 3}
+      propertyPath: _interactableView
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6805181517451973681, guid: 895b4fce45a736b469a187e26178f8e5,
         type: 3}
       propertyPath: m_Materials.Array.data[4]
@@ -653,6 +658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cl (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5229088813525880613, guid: 895b4fce45a736b469a187e26178f8e5,
+        type: 3}
+      propertyPath: _interactableView
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6805181517451973681, guid: 895b4fce45a736b469a187e26178f8e5,
         type: 3}
@@ -770,6 +780,11 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4468945760993784507, guid: a9cda3ede2380dc42b130d1fb8c60f26,
+        type: 3}
+      propertyPath: _interactableView
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6060028682926563952, guid: a9cda3ede2380dc42b130d1fb8c60f26,
         type: 3}
       propertyPath: m_Materials.Array.data[4]
@@ -875,6 +890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cl
+      objectReference: {fileID: 0}
+    - target: {fileID: 5229088813525880613, guid: 895b4fce45a736b469a187e26178f8e5,
+        type: 3}
+      propertyPath: _interactableView
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6805181517451973681, guid: 895b4fce45a736b469a187e26178f8e5,
         type: 3}
