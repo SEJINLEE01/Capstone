@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8519221302927898565}
   - component: {fileID: 1560469507161088212}
   - component: {fileID: 7341383133081673078}
-  - component: {fileID: 385080012176812164}
   m_Layer: 0
   m_Name: bond
   m_TagString: Untagged
@@ -84,29 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &385080012176812164
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733965234539453842}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8122913768690158003
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6440954452400638461}
   - component: {fileID: 5102046652759285917}
-  - component: {fileID: 7562544599211752762}
+  - component: {fileID: 3090440015579413449}
   m_Layer: 0
   m_Name: Cl2_Molecule
   m_TagString: Cl2
@@ -171,8 +147,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7562544599211752762
-SphereCollider:
+--- !u!136 &3090440015579413449
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -186,12 +162,14 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.15
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.028615713
+  m_Height: 0.127244
+  m_Direction: 0
+  m_Center: {x: 0.00025892258, y: -0.00080150366, z: -0.000040741637}
 --- !u!1 &8954552704594890734
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +388,10 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6354740692727489686, guid: 895b4fce45a736b469a187e26178f8e5, type: 3}
+    - {fileID: 5326601115650759191, guid: 895b4fce45a736b469a187e26178f8e5, type: 3}
+    - {fileID: 5229088813525880613, guid: 895b4fce45a736b469a187e26178f8e5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -519,7 +500,10 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6354740692727489686, guid: 895b4fce45a736b469a187e26178f8e5, type: 3}
+    - {fileID: 5326601115650759191, guid: 895b4fce45a736b469a187e26178f8e5, type: 3}
+    - {fileID: 5229088813525880613, guid: 895b4fce45a736b469a187e26178f8e5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
