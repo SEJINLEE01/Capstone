@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6705329672608575519}
@@ -79,6 +79,7 @@ MonoBehaviour:
   - {fileID: 6705329672608575519}
   DelayTime: 2
   isTrigger: 0
+  EnterAtom: []
   duration: 3.5
 --- !u!1 &366073461545184635
 GameObject:
@@ -1530,13 +1531,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0978241
+        value: 0.021743774
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1921,13 +1922,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0978241
+        value: 0.021743774
         inSlope: 0
         outSlope: 0
         tangentMode: 0

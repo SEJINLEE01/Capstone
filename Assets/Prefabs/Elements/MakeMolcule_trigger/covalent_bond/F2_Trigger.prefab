@@ -604,13 +604,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0978241
+        value: 0.021731168
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1020,13 +1020,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0978241
+        value: 0.021731168
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1603,6 +1603,7 @@ GameObject:
   - component: {fileID: 5844370506507552729}
   - component: {fileID: 6890718316270167061}
   - component: {fileID: 6493862418366007331}
+  - component: {fileID: 4795290329019492384}
   m_Layer: 0
   m_Name: F2_Trigger
   m_TagString: Untagged
@@ -1620,7 +1621,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8172057245258633946}
@@ -1646,7 +1647,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.1, z: 2}
+  m_Size: {x: 3.368807, y: 0.1, z: 3.595229}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6493862418366007331
 MonoBehaviour:
@@ -1671,7 +1672,37 @@ MonoBehaviour:
   - {fileID: 8172057245258633946}
   DelayTime: 2
   isTrigger: 0
+  EnterAtom: []
   duration: 3.5
+--- !u!114 &4795290329019492384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780504727716120589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5f28f13aad8d14abd99b58e74363fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electrons:
+  - {fileID: 1685751359581716040}
+  - {fileID: 1793241472846388572}
+  - {fileID: 3860450786087814715}
+  - {fileID: 5263086372972095112}
+  - {fileID: 2464373789063915697}
+  - {fileID: 9046184579682018993}
+  - {fileID: 227420015095268835}
+  - {fileID: 6583607003554529965}
+  - {fileID: 2808834337038162166}
+  - {fileID: 5905175746268638338}
+  - {fileID: 5937416912073778505}
+  - {fileID: 7396971533871521576}
+  - {fileID: 8979591209085311054}
+  - {fileID: 7789627075971319422}
+  trigger: {fileID: 6493862418366007331}
+  molcule: {fileID: 5153885156447627392, guid: 2a10d1670a428374c8359dc03ea97807, type: 3}
 --- !u!1 &7396971533871521576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1851,7 @@ Transform:
   m_GameObject: {fileID: 7567332224003616956}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.378, y: 1.898, z: -2}
+  m_LocalPosition: {x: 0.38, y: 1.898, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2053,7 +2084,7 @@ Transform:
   m_GameObject: {fileID: 8102992154545172857}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.378, y: 1.898, z: 2}
+  m_LocalPosition: {x: 0.38, y: 1.898, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
