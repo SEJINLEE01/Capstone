@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
 
@@ -7,14 +8,17 @@ public class Molcule_Trigger : MonoBehaviour
 {
     public GameObject[] Atom;
     int count = 0;
+    int count2 = 0;
     public Transform[] ToObj;
     public Transform[] FromObj;
     public float DelayTime;
     List<Vector3> direction;
-    private float speed=0.25f;
+    float speed=0.025f;
     [HideInInspector]
     public bool isTrigger = false;
     bool isActive = false;
+    [HideInInspector]
+    public List<GameObject> EnterAtom = new List<GameObject>();
 
     private float elapsedTime = 0f; // 경과 시간
     public float duration; // 이동 시간 (1초)
@@ -29,10 +33,15 @@ public class Molcule_Trigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        count2++;
         foreach (var atom in Atom)
         {
+            if (atom == null)
+                return;
+
             if (other.CompareTag(atom.name))
             {
+                EnterAtom.Add(other.gameObject);
                 if (!atom.activeSelf)
                 {
                     if(count == Atom.Length-1)
@@ -50,10 +59,12 @@ public class Molcule_Trigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        count2--;
         foreach (var atom in Atom)
         {
             if (other.CompareTag(atom.name))
             {
+                EnterAtom.Remove(other.gameObject);
                 if (atom.activeSelf)
                 {
                     atom.SetActive(false);
@@ -62,11 +73,12 @@ public class Molcule_Trigger : MonoBehaviour
                 }
             }
         }
+        elapsedTime = 0f;
     }
 
     private void Update()
     {
-        if (count == Atom.Length && isActive)
+        if (count == Atom.Length && isActive && count2 == Atom.Length)
         {
             if (isMoving)
             {

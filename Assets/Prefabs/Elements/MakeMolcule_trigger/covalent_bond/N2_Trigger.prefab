@@ -79,13 +79,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0978241
+        value: 0.021743774
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -512,13 +512,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0978241
+        value: 0.021743774
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -876,6 +876,7 @@ GameObject:
   - component: {fileID: 5004795492788228277}
   - component: {fileID: 2682844567512358237}
   - component: {fileID: 1975940736913474433}
+  - component: {fileID: 7504845559748567395}
   m_Layer: 0
   m_Name: N2_Trigger
   m_TagString: Untagged
@@ -893,7 +894,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1221225230993317876}
@@ -944,7 +945,33 @@ MonoBehaviour:
   - {fileID: 1221225230993317876}
   DelayTime: 2
   isTrigger: 0
+  EnterAtom: []
   duration: 4
+--- !u!114 &7504845559748567395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642514494395784229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5f28f13aad8d14abd99b58e74363fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electrons:
+  - {fileID: 5636576921443889538}
+  - {fileID: 5162493983436005984}
+  - {fileID: 8134009666822630712}
+  - {fileID: 6739733135686507898}
+  - {fileID: 405218512735143372}
+  - {fileID: 1641294631194401542}
+  - {fileID: 3606232739585248531}
+  - {fileID: 858186381972582163}
+  - {fileID: 5640593398859119826}
+  - {fileID: 3692839601054485932}
+  trigger: {fileID: 1975940736913474433}
+  molcule: {fileID: 204222984343373694, guid: 4948a29970023d54baf78e7d5b231884, type: 3}
 --- !u!1 &3692839601054485932
 GameObject:
   m_ObjectHideFlags: 0
