@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4338360702115956625}
   - component: {fileID: 1595985594799897597}
   - component: {fileID: 6322985833474984244}
-  - component: {fileID: 5384507841637460003}
   m_Layer: 0
   m_Name: Rbond (1)
   m_TagString: Untagged
@@ -84,29 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5384507841637460003
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096223251958442409}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2039491028386573329
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +94,6 @@ GameObject:
   - component: {fileID: 8645663562018252767}
   - component: {fileID: 345823728405121845}
   - component: {fileID: 7864543617729885860}
-  - component: {fileID: 8003065597440689078}
   m_Layer: 0
   m_Name: Rbond
   m_TagString: Untagged
@@ -191,29 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8003065597440689078
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039491028386573329}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3359049766019715641
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +297,6 @@ GameObject:
   - component: {fileID: 2151480988432564839}
   - component: {fileID: 5230875694520014384}
   - component: {fileID: 1534025282665172905}
-  - component: {fileID: 555409749294646889}
   m_Layer: 0
   m_Name: Lbond
   m_TagString: Untagged
@@ -418,29 +369,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &555409749294646889
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3486925798067043926}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3563129885042512576
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +380,6 @@ GameObject:
   - component: {fileID: 2315828596448198645}
   - component: {fileID: 1483903698907856205}
   - component: {fileID: 7898279772723055114}
-  - component: {fileID: 1614404900396086048}
   m_Layer: 0
   m_Name: Lbond (1)
   m_TagString: Untagged
@@ -525,29 +452,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1614404900396086048
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3563129885042512576}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4394704004969344706
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3774101310645562906}
   - component: {fileID: 789722866604101217}
-  - component: {fileID: 2681708994977678640}
+  - component: {fileID: 5524835619728116232}
   m_Layer: 0
   m_Name: CO2_Molecule
   m_TagString: CO2
@@ -616,8 +520,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &2681708994977678640
-SphereCollider:
+--- !u!136 &5524835619728116232
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -631,12 +535,14 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.15
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.0357427
+  m_Height: 0.19934464
+  m_Direction: 0
+  m_Center: {x: -0.0019378662, y: 0.0007427037, z: 0}
 --- !u!1001 &3889744970483500883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,7 +656,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3630532484628398830, guid: 0c62d753fddb9bb4184e4d2d295d1b20, type: 3}
+    - {fileID: 2368246793574184678, guid: 0c62d753fddb9bb4184e4d2d295d1b20, type: 3}
+    - {fileID: 6391294495670712008, guid: 0c62d753fddb9bb4184e4d2d295d1b20, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4645761448182559475, guid: 0c62d753fddb9bb4184e4d2d295d1b20, type: 3}
     - {fileID: 8969530515232513237, guid: 0c62d753fddb9bb4184e4d2d295d1b20, type: 3}
@@ -866,7 +775,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6094722662791367967, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
+    - {fileID: 8355692821651079194, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
+    - {fileID: 6256270639432393293, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5667676063213858313, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
     - {fileID: 4335848494472128098, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
@@ -982,7 +894,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6094722662791367967, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
+    - {fileID: 8355692821651079194, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
+    - {fileID: 6256270639432393293, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5667676063213858313, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}
     - {fileID: 4335848494472128098, guid: 1b10c2eb6223cb548b60b27d9aa83d74, type: 3}

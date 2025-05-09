@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4552885250358118675}
   - component: {fileID: 6902904352734826781}
   - component: {fileID: 4675061830584717417}
+  - component: {fileID: 8786112299776058354}
   m_Layer: 0
   m_Name: Cl2_Trigger
   m_TagString: Untagged
@@ -54,7 +55,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.1, z: 2}
+  m_Size: {x: 3.5, y: 0.1, z: 3.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4675061830584717417
 MonoBehaviour:
@@ -81,6 +82,35 @@ MonoBehaviour:
   isTrigger: 0
   EnterAtom: []
   duration: 3.5
+--- !u!114 &8786112299776058354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252728056626148750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5f28f13aad8d14abd99b58e74363fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electrons:
+  - {fileID: 366073461545184635}
+  - {fileID: 2955381172713429365}
+  - {fileID: 4724338099945545427}
+  - {fileID: 3228191501962418802}
+  - {fileID: 8266243108733731507}
+  - {fileID: 7391275723441294315}
+  - {fileID: 1483182660732649992}
+  - {fileID: 5130685641071304799}
+  - {fileID: 7622675081949092769}
+  - {fileID: 2086416357332481231}
+  - {fileID: 6715685159286146724}
+  - {fileID: 1384050749686214700}
+  - {fileID: 3524710165592656627}
+  - {fileID: 6469249408433820488}
+  trigger: {fileID: 4675061830584717417}
+  molcule: {fileID: 8122913768690158003, guid: f4e8ed6f54708754084a3c252d52139a, type: 3}
 --- !u!1 &366073461545184635
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 2114930044648902180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.378, y: 1.898, z: 2}
+  m_LocalPosition: {x: 0.38, y: 1.898, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1227,7 +1257,7 @@ Transform:
   m_GameObject: {fileID: 4808039211205777822}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.378, y: 1.898, z: -2}
+  m_LocalPosition: {x: 0.38, y: 1.898, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

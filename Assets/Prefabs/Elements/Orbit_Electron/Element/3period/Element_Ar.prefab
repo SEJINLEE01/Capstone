@@ -4272,7 +4272,6 @@ GameObject:
   - component: {fileID: 5483047369059889738}
   - component: {fileID: 8055361074742784162}
   - component: {fileID: 1476931540283149198}
-  - component: {fileID: 1509543022721012541}
   m_Layer: 0
   m_Name: Element_Ar
   m_TagString: Untagged
@@ -4385,8 +4384,8 @@ MonoBehaviour:
   _transferOnSecondSelection: 0
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 1509543022721012541}
-  _twoGrabTransformer: {fileID: 1509543022721012541}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 7761033584543981445}
   _maxGrabPoints: -1
   _rigidbody: {fileID: 1476931540283149198}
@@ -4419,66 +4418,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1509543022721012541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8637667062054433337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb7085c111fcb44493d57d4e336d3fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _scaleConstraints:
-    ConstraintsAreRelative: 1
-    XAxis:
-      ConstrainAxis: 1
-      AxisRange:
-        Min: 0.1
-        Max: 0.5
-    YAxis:
-      ConstrainAxis: 1
-      AxisRange:
-        Min: 0.1
-        Max: 0.5
-    ZAxis:
-      ConstrainAxis: 1
-      AxisRange:
-        Min: 0.1
-        Max: 0.5
-  _resetScaleResponsivenessOnConstraintOvershoot: 0
