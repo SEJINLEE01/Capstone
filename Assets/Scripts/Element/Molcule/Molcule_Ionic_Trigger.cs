@@ -18,6 +18,8 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
     [HideInInspector]
     public bool isActive = false;
 
+    [HideInInspector]
+    public List<GameObject> EnterAtom = new List<GameObject>();
     public Ionic_Action[] action;
     public eMove_Trigger eMove_Trigger;
     int isEnd = 0;
@@ -30,8 +32,12 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
     {
         foreach (var atom in Atom)
         {
+            if (atom == null)
+                return;
+
             if (other.CompareTag(atom.name))
             {
+                EnterAtom.Add(other.gameObject);
                 if (!atom.activeSelf)
                 {
                     if (count == Atom.Length - 1)
@@ -53,6 +59,7 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
         {
             if (other.CompareTag(atom.name))
             {
+                EnterAtom.Remove(other.gameObject);
                 if (atom.activeSelf)
                 {
                     atom.SetActive(false);
@@ -88,7 +95,7 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
             }
             else
             {
-                
+                gameObject.GetComponent<Make_ionic_molcule>().isActive = true;
             }
         }
     }

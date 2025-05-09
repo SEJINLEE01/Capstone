@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 1234072077470741546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 4.5, z: 4.5}
+  m_LocalPosition: {x: 0.38, y: 6.31, z: 4.5}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1618,7 +1618,7 @@ Transform:
   m_GameObject: {fileID: 5425945314011363687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 4.5, z: -4.5}
+  m_LocalPosition: {x: 0.38, y: 6.31, z: -4.5}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1713,6 +1713,7 @@ GameObject:
   - component: {fileID: 8929687580644327340}
   - component: {fileID: 217255479911811712}
   - component: {fileID: 2785857865921591646}
+  - component: {fileID: 8592968070053283764}
   m_Layer: 0
   m_Name: SiO2_Trigger
   m_TagString: Untagged
@@ -1730,7 +1731,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 17.35}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8128385808402998685}
@@ -1757,7 +1758,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.1, z: 2}
+  m_Size: {x: 7, y: 0.1, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2785857865921591646
 MonoBehaviour:
@@ -1784,7 +1785,38 @@ MonoBehaviour:
   DelayTime: 2
   isTrigger: 0
   EnterAtom: []
-  duration: 5
+  duration: 2.5
+--- !u!114 &8592968070053283764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812604558394985880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5f28f13aad8d14abd99b58e74363fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electrons:
+  - {fileID: 3360528048408401638}
+  - {fileID: 7718425876861258592}
+  - {fileID: 2494999481610746667}
+  - {fileID: 5982904532843574129}
+  - {fileID: 5311644474997619969}
+  - {fileID: 7801698719599303548}
+  - {fileID: 5407266116817262597}
+  - {fileID: 7235137287044900507}
+  - {fileID: 6218168488389455774}
+  - {fileID: 8727928673943905821}
+  - {fileID: 7320232207124213037}
+  - {fileID: 2638575979733782250}
+  - {fileID: 3013858336496905354}
+  - {fileID: 7237371119510182473}
+  - {fileID: 579664763675717501}
+  - {fileID: 4962450165901384367}
+  trigger: {fileID: 2785857865921591646}
+  molcule: {fileID: 152966355044372030, guid: d9dff655e26fb0540ae45eb9fb360a1e, type: 3}
 --- !u!1 &5982904532843574129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,7 +2750,7 @@ Transform:
   m_GameObject: {fileID: 8588394671015217575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 4.5, z: 0}
+  m_LocalPosition: {x: 0.38, y: 6.31, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children:

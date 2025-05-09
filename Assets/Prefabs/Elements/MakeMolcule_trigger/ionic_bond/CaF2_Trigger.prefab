@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5286563256634063032}
   - component: {fileID: 1769597119531111513}
   - component: {fileID: 9036232648713787739}
+  - component: {fileID: 3437384582693076354}
   m_Layer: 0
   m_Name: CaF2_Trigger
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1954855091420798439}
@@ -56,7 +57,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.1, z: 2}
+  m_Size: {x: 7, y: 0.1, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1769597119531111513
 MonoBehaviour:
@@ -81,15 +82,16 @@ MonoBehaviour:
   - {fileID: 3675094983351979450}
   - {fileID: 1361871868882583440}
   DelayTime: 1
-  speed: 3
+  speed: 0.0005
   isTrigger: 0
   isActive: 0
+  EnterAtom: []
   action:
   - {fileID: 4697801792775329914}
   - {fileID: 1289593129947916084}
   - {fileID: 6046605127902095283}
   eMove_Trigger: {fileID: 9036232648713787739}
-  duration: 3.01
+  duration: 2.25
 --- !u!114 &9036232648713787739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,11 +135,25 @@ MonoBehaviour:
   - {fileID: 4622405885926980865}
   - {fileID: 6704151391846192026}
   active: 0
-  speed: 1
+  speed: 0.1
   duration: 3
   minusS: 0.2
   plusS: 0.22
-  fadeDuration: 3
+  fadeDuration: 1.5
+--- !u!114 &3437384582693076354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249640893281913930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd9b321cd9700f498b0c6ca7d008b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  molcule: {fileID: 5178759735975270270, guid: e15491f3dd8a93141a7b09dfe7025b5c, type: 3}
 --- !u!1 &1039513868907231670
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 1039513868907231670}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.378, y: 1.898, z: 3}
+  m_LocalPosition: {x: 0.38, y: 5.09, z: 3}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.79999995}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -264,7 +280,6 @@ GameObject:
   - component: {fileID: 6722946964454950536}
   - component: {fileID: 5368779675016302006}
   - component: {fileID: 7421504832836531586}
-  - component: {fileID: 6607755164207485490}
   m_Layer: 0
   m_Name: electron
   m_TagString: Untagged
@@ -372,25 +387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 1954855091420798439}
   speed: 80
---- !u!114 &6607755164207485490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282887741338044755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a265a25c3c831694fb2c42909c72401c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ToObj: {fileID: 3675094983351979450}
-  FromObj: {fileID: 1954855091420798439}
-  Trigger: {fileID: 1769597119531111513}
-  electrons:
-  - {fileID: 1282887741338044755}
-  Degree: 1
-  OnTarget: 0
 --- !u!1 &2276303729456189348
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +556,7 @@ Transform:
   m_GameObject: {fileID: 2325626364615448214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.378, y: 1.898, z: 0}
+  m_LocalPosition: {x: 0.38, y: 5.09, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2014,7 +2010,7 @@ Transform:
   m_GameObject: {fileID: 7522922502650170947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.378, y: 1.898, z: -3}
+  m_LocalPosition: {x: 0.38, y: 5.09, z: -3}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:

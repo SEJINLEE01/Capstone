@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8191553703526362043}
   - component: {fileID: 8830276360278055365}
   - component: {fileID: 2349297595608432355}
-  - component: {fileID: 5155774241171625007}
   m_Layer: 0
   m_Name: Element_C
   m_TagString: Untagged
@@ -153,76 +152,13 @@ MonoBehaviour:
   _transferOnSecondSelection: 0
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 5155774241171625007}
-  _twoGrabTransformer: {fileID: 5155774241171625007}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 1075195511401811121}
   _maxGrabPoints: -1
   _rigidbody: {fileID: 8830276360278055365}
   _kinematicWhileSelected: 1
   _throwWhenUnselected: 1
---- !u!114 &5155774241171625007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989435150462431441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb7085c111fcb44493d57d4e336d3fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _scaleConstraints:
-    ConstraintsAreRelative: 1
-    XAxis:
-      ConstrainAxis: 1
-      AxisRange:
-        Min: 0.1
-        Max: 0.5
-    YAxis:
-      ConstrainAxis: 1
-      AxisRange:
-        Min: 0.1
-        Max: 0.5
-    ZAxis:
-      ConstrainAxis: 1
-      AxisRange:
-        Min: 0.1
-        Max: 0.5
-  _resetScaleResponsivenessOnConstraintOvershoot: 0
 --- !u!1 &2271861181872698615
 GameObject:
   m_ObjectHideFlags: 0
