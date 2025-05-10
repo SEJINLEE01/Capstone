@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5503004531889453052}
   - component: {fileID: 8594623697071858363}
   - component: {fileID: 1625830941335102512}
+  - component: {fileID: 1755353188022501227}
   m_Layer: 0
   m_Name: NH3_Trigger
   m_TagString: Untagged
@@ -111,6 +112,22 @@ MonoBehaviour:
   - {fileID: 4957242200463380574}
   trigger: {fileID: 8594623697071858363}
   molcule: {fileID: 1364355081526770705, guid: 9894927ff891a1342a2a1a10be196312, type: 3}
+--- !u!114 &1755353188022501227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616727529121488807}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 4
+  molcule: {fileID: 1364355081526770705, guid: 9894927ff891a1342a2a1a10be196312, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000003000000
 --- !u!1 &811676999011133802
 GameObject:
   m_ObjectHideFlags: 0

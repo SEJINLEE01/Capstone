@@ -38,6 +38,7 @@ public class Make_Molcule : MonoBehaviour
                     Destroy(atom);
                 }
                 Instantiate(molcule, transform.position + new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 90f, 0));
+                GetComponent<After_Generator>().enabled = true;
                 GetComponent<Make_Molcule>().enabled = false;
             }
         }

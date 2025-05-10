@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1769597119531111513}
   - component: {fileID: 9036232648713787739}
   - component: {fileID: 3437384582693076354}
+  - component: {fileID: 7405432629319065209}
   m_Layer: 0
   m_Name: CaF2_Trigger
   m_TagString: Untagged
@@ -154,6 +155,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   molcule: {fileID: 5178759735975270270, guid: e15491f3dd8a93141a7b09dfe7025b5c, type: 3}
+--- !u!114 &7405432629319065209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249640893281913930}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 3
+  molcule: {fileID: 5178759735975270270, guid: e15491f3dd8a93141a7b09dfe7025b5c, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000002000000
 --- !u!1 &1039513868907231670
 GameObject:
   m_ObjectHideFlags: 0

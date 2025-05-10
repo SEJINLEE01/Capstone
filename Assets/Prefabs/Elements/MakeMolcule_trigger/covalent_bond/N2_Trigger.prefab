@@ -877,6 +877,7 @@ GameObject:
   - component: {fileID: 2682844567512358237}
   - component: {fileID: 1975940736913474433}
   - component: {fileID: 7504845559748567395}
+  - component: {fileID: 8029993047928153572}
   m_Layer: 0
   m_Name: N2_Trigger
   m_TagString: Untagged
@@ -920,7 +921,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.1, z: 2}
+  m_Size: {x: 3.5, y: 0.1, z: 3.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1975940736913474433
 MonoBehaviour:
@@ -972,6 +973,22 @@ MonoBehaviour:
   - {fileID: 3692839601054485932}
   trigger: {fileID: 1975940736913474433}
   molcule: {fileID: 204222984343373694, guid: 4948a29970023d54baf78e7d5b231884, type: 3}
+--- !u!114 &8029993047928153572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642514494395784229}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  molcule: {fileID: 204222984343373694, guid: 4948a29970023d54baf78e7d5b231884, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 02000000
 --- !u!1 &3692839601054485932
 GameObject:
   m_ObjectHideFlags: 0

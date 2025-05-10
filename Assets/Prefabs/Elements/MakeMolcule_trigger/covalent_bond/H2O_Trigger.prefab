@@ -1545,6 +1545,7 @@ GameObject:
   - component: {fileID: 6514293396451051751}
   - component: {fileID: 7085539949173406297}
   - component: {fileID: 317128904632351085}
+  - component: {fileID: 7010709970032189565}
   m_Layer: 0
   m_Name: H2O_Trigger
   m_TagString: Untagged
@@ -1640,6 +1641,22 @@ MonoBehaviour:
   - {fileID: 7182181799248228432}
   trigger: {fileID: 7085539949173406297}
   molcule: {fileID: 3849372314825005701, guid: 6315a871c139d254a93931e9ddab52aa, type: 3}
+--- !u!114 &7010709970032189565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916955051385003195}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 3
+  molcule: {fileID: 3849372314825005701, guid: 6315a871c139d254a93931e9ddab52aa, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0200000001000000
 --- !u!1 &8055917867362693718
 GameObject:
   m_ObjectHideFlags: 0

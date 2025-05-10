@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3121307125908350401}
   - component: {fileID: 6210353046193894173}
   - component: {fileID: 6128848445465703103}
+  - component: {fileID: 8765303887719859902}
   m_Layer: 0
   m_Name: H2_Trigger
   m_TagString: Untagged
@@ -99,6 +100,22 @@ MonoBehaviour:
   - {fileID: 2955162300749465859}
   trigger: {fileID: 6210353046193894173}
   molcule: {fileID: 8191154772451385442, guid: 7f7ac3ab253d6f34ebb87cc81a48d99b, type: 3}
+--- !u!114 &8765303887719859902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538574618071428517}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  molcule: {fileID: 8191154772451385442, guid: 7f7ac3ab253d6f34ebb87cc81a48d99b, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 02000000
 --- !u!1 &2955162300749465859
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@ public class Make_ionic_molcule : MonoBehaviour
                 Instantiate(molcule, transform.position + new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 90f, 0));
                 GetComponent<eMove_Trigger>().enabled = false;
                 GetComponent<Make_ionic_molcule>().enabled = false;
+                GetComponent<After_Generator>().enabled = true;
             }
         }
     }
