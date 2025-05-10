@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 6463503698532664971}
   - component: {fileID: 5807542584920824681}
   - component: {fileID: 6209040717215031606}
+  - component: {fileID: 556322565068621155}
   m_Layer: 0
   m_Name: MgO_Trigger
   m_TagString: Untagged
@@ -263,6 +264,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   molcule: {fileID: 5265482381131262801, guid: 02af299d48731fb4a8443a527faab999, type: 3}
+--- !u!114 &556322565068621155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715800260129021739}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  molcule: {fileID: 5265482381131262801, guid: 02af299d48731fb4a8443a527faab999, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000001000000
 --- !u!1 &1742460809304943537
 GameObject:
   m_ObjectHideFlags: 0

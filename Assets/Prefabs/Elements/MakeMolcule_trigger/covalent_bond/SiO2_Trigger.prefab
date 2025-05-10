@@ -1714,6 +1714,7 @@ GameObject:
   - component: {fileID: 217255479911811712}
   - component: {fileID: 2785857865921591646}
   - component: {fileID: 8592968070053283764}
+  - component: {fileID: 6547738431327153909}
   m_Layer: 0
   m_Name: SiO2_Trigger
   m_TagString: Untagged
@@ -1817,6 +1818,22 @@ MonoBehaviour:
   - {fileID: 4962450165901384367}
   trigger: {fileID: 2785857865921591646}
   molcule: {fileID: 152966355044372030, guid: d9dff655e26fb0540ae45eb9fb360a1e, type: 3}
+--- !u!114 &6547738431327153909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812604558394985880}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 3
+  molcule: {fileID: 152966355044372030, guid: d9dff655e26fb0540ae45eb9fb360a1e, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000002000000
 --- !u!1 &5982904532843574129
 GameObject:
   m_ObjectHideFlags: 0

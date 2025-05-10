@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 6044012082138631286}
   - component: {fileID: 986576647250213905}
   - component: {fileID: 9180186950114237621}
+  - component: {fileID: 5886410115636050425}
   m_Layer: 0
   m_Name: O2_Trigger
   m_TagString: Untagged
@@ -371,6 +372,22 @@ MonoBehaviour:
   - {fileID: 4631760856719280919}
   trigger: {fileID: 986576647250213905}
   molcule: {fileID: 4363983016836201154, guid: f17a3308e72984f4db99e6e8c22f64b6, type: 3}
+--- !u!114 &5886410115636050425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220599110415949280}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  molcule: {fileID: 4363983016836201154, guid: f17a3308e72984f4db99e6e8c22f64b6, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 02000000
 --- !u!1 &1304315229586041406
 GameObject:
   m_ObjectHideFlags: 0

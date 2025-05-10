@@ -780,6 +780,7 @@ GameObject:
   - component: {fileID: 8186181034759768110}
   - component: {fileID: 3569478698473342551}
   - component: {fileID: 202294066390384784}
+  - component: {fileID: 4365111486714317705}
   m_Layer: 0
   m_Name: CH4_Trigger
   m_TagString: Untagged
@@ -883,6 +884,22 @@ MonoBehaviour:
   - {fileID: 8343116526631080488}
   trigger: {fileID: 3569478698473342551}
   molcule: {fileID: 7957556866238901928, guid: 33f044a77aebe4544a5968186a928d7d, type: 3}
+--- !u!114 &4365111486714317705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871113862518067912}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 5
+  molcule: {fileID: 7957556866238901928, guid: 33f044a77aebe4544a5968186a928d7d, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000004000000
 --- !u!1 &4155411675215062033
 GameObject:
   m_ObjectHideFlags: 0

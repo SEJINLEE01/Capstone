@@ -1167,6 +1167,7 @@ GameObject:
   - component: {fileID: 5332961717435490867}
   - component: {fileID: 2499122269385129479}
   - component: {fileID: 7761154665025434962}
+  - component: {fileID: 353687890992621953}
   m_Layer: 0
   m_Name: HCl_Trigger
   m_TagString: Untagged
@@ -1260,6 +1261,22 @@ MonoBehaviour:
   - {fileID: 5282327796815762235}
   trigger: {fileID: 2499122269385129479}
   molcule: {fileID: 5067617530596998922, guid: b5c0080996ad8ac40bb2d480a31907c6, type: 3}
+--- !u!114 &353687890992621953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474791455877763326}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  molcule: {fileID: 5067617530596998922, guid: b5c0080996ad8ac40bb2d480a31907c6, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000001000000
 --- !u!1 &5541391613207668906
 GameObject:
   m_ObjectHideFlags: 0

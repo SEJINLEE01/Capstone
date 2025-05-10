@@ -30,6 +30,10 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        if (!this.enabled)
+        {
+            return; // 스크립트가 비활성화된 상태라면 메서드를 종료
+        }
         foreach (var atom in Atom)
         {
             if (atom == null)
@@ -55,6 +59,10 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!this.enabled)
+        {
+            return; // 스크립트가 비활성화된 상태라면 메서드를 종료
+        }
         foreach (var atom in Atom)
         {
             if (other.CompareTag(atom.name))

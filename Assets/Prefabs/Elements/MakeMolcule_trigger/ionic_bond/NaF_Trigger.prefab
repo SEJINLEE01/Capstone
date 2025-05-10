@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 5022966188509492767}
   - component: {fileID: 1734977078504551000}
   - component: {fileID: 8322374059371039069}
+  - component: {fileID: 5304777941830809609}
   m_Layer: 0
   m_Name: NaF_Trigger
   m_TagString: Untagged
@@ -245,6 +246,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   molcule: {fileID: 361071855070466312, guid: 90b8c33b047561040aa97d31088b2f14, type: 3}
+--- !u!114 &5304777941830809609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585203358313562341}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  molcule: {fileID: 361071855070466312, guid: 90b8c33b047561040aa97d31088b2f14, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000001000000
 --- !u!1 &2627849676289469604
 GameObject:
   m_ObjectHideFlags: 0

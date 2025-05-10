@@ -1604,6 +1604,7 @@ GameObject:
   - component: {fileID: 6890718316270167061}
   - component: {fileID: 6493862418366007331}
   - component: {fileID: 4795290329019492384}
+  - component: {fileID: 4004187777185281306}
   m_Layer: 0
   m_Name: F2_Trigger
   m_TagString: Untagged
@@ -1703,6 +1704,22 @@ MonoBehaviour:
   - {fileID: 7789627075971319422}
   trigger: {fileID: 6493862418366007331}
   molcule: {fileID: 5153885156447627392, guid: 2a10d1670a428374c8359dc03ea97807, type: 3}
+--- !u!114 &4004187777185281306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780504727716120589}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  molcule: {fileID: 5153885156447627392, guid: 2a10d1670a428374c8359dc03ea97807, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 02000000
 --- !u!1 &7396971533871521576
 GameObject:
   m_ObjectHideFlags: 0

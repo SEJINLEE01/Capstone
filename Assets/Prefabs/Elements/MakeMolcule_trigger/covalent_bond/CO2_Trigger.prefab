@@ -2849,6 +2849,7 @@ GameObject:
   - component: {fileID: 1288046622347389133}
   - component: {fileID: 3604015183439537687}
   - component: {fileID: 2664782714544610524}
+  - component: {fileID: 8882181863493248393}
   m_Layer: 0
   m_Name: CO2_Trigger
   m_TagString: Untagged
@@ -2952,3 +2953,19 @@ MonoBehaviour:
   - {fileID: 3750982917450586967}
   trigger: {fileID: 3604015183439537687}
   molcule: {fileID: 4394704004969344706, guid: 37abbf8531bb06b46b078ebfa1217397, type: 3}
+--- !u!114 &8882181863493248393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785545719495876458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3866850ecc8000a4fbe69c70e4f4721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 3
+  molcule: {fileID: 4394704004969344706, guid: 37abbf8531bb06b46b078ebfa1217397, type: 3}
+  SpawnPoint: {fileID: 0}
+  atom_count: 0100000002000000
