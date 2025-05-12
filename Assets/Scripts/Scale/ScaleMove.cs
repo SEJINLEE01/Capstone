@@ -5,15 +5,20 @@ using UnityEngine;
 public class ScaleMove : MonoBehaviour
 {
     public GameObject scale;
+    public bool isScale = false;
     // Start is called before the first frame update
-    private void OnCollisionStay(Collision collision)
+    public void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "H")
         {
-            scale.transform.position=new Vector3(scale.transform.position.x,0.8f,scale.transform.position.z);   
+           
+            isScale = true;
         }
     }
-   
+    public void OnCollisionExit(Collision collision)
+    {
+        isScale = false;
+    }
 
 
 }
