@@ -277,11 +277,10 @@ MonoBehaviour:
   FromObj: {fileID: 4977113939267736905}
   Trigger: {fileID: 3569478698473342551}
   electrons:
-  - {fileID: 4406760479845508051}
-  - {fileID: 1889696322485142545}
-  - {fileID: 5254939335828820757}
   - {fileID: 1662225029177713161}
-  Degree: 17
+  - {fileID: 4406760479845508051}
+  - {fileID: 5254939335828820757}
+  Degree: 16
   OnTarget: 0
 --- !u!1 &1889696322485142545
 GameObject:
@@ -296,6 +295,7 @@ GameObject:
   - component: {fileID: 949379445654921542}
   - component: {fileID: 1707124913244976502}
   - component: {fileID: 3644583661873259778}
+  - component: {fileID: 2460045877843854750}
   m_Layer: 0
   m_Name: electron3
   m_TagString: Untagged
@@ -403,6 +403,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: {fileID: 4977113939267736905}
   speed: 60
+--- !u!114 &2460045877843854750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889696322485142545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a89179b1b802d41ac906e862c19841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToObj: {fileID: 1661927037765281155}
+  FromObj: {fileID: 4977113939267736905}
+  Trigger: {fileID: 3569478698473342551}
+  electrons:
+  - {fileID: 1889696322485142545}
+  Degree: 74
+  OnTarget: 1
 --- !u!1 &1943710398833207854
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +917,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 5
   molcule: {fileID: 7957556866238901928, guid: 33f044a77aebe4544a5968186a928d7d, type: 3}
-  SpawnPoint: {fileID: 0}
   atom_count: 0100000004000000
 --- !u!1 &4155411675215062033
 GameObject:

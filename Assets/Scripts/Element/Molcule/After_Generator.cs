@@ -23,11 +23,8 @@ public class After_Generator : MonoBehaviour
 
         string input = molcule.tag;
         input = Regex.Replace(input, @"\d", "");
-        Debug.Log("ㅑ인풋은어떻게되냐고요?:" + input);
         splitResult = Regex.Split(input, "(?=[A-Z])");
         current_atom_count = new int[splitResult.Length-1];
-        for(int i=0;i< splitResult.Length;i++)
-            Debug.Log("나뉜토큰들"+ splitResult[i]);
     }
 
     private void OnTriggerEnter(Collider other)

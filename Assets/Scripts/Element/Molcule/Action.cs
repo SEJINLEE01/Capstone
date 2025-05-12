@@ -19,6 +19,7 @@ public class Action : MonoBehaviour
         direction = (ToObj.position - FromObj.position).normalized;
         direction2 = (transform.position - FromObj.position).normalized;
         float dt = Vector3.Dot(direction, direction2);
+
         if(dt<Mathf.Cos((Degree-1f) * Mathf.Deg2Rad) && dt>Mathf.Cos((Degree+1f) * Mathf.Deg2Rad) && action)
         {
             if(!OnTarget && direction.y > direction2.y)
