@@ -239,8 +239,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5793113998891896998}
-  - {fileID: 3493234151044817098}
+  - {fileID: 6121899547443790060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1615247867691964292
@@ -277,7 +276,7 @@ Transform:
   m_Children:
   - {fileID: 4850436758594141709}
   - {fileID: 18556812669794576}
-  m_Father: {fileID: 8846045455433084330}
+  m_Father: {fileID: 6121899547443790060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &6771339802155240736
 MeshFilter:
@@ -350,6 +349,39 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1629991845216826329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6121899547443790060}
+  m_Layer: 0
+  m_Name: HCl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6121899547443790060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629991845216826329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5793113998891896998}
+  - {fileID: 3493234151044817098}
+  m_Father: {fileID: 8846045455433084330}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1928488173078261963
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +573,7 @@ Transform:
   - {fileID: 7213920098521150396}
   - {fileID: 739471597590885108}
   - {fileID: 4336328759390488792}
-  m_Father: {fileID: 8846045455433084330}
+  m_Father: {fileID: 6121899547443790060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &5236340676441762673
 MeshFilter:
