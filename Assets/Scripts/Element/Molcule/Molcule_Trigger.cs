@@ -90,6 +90,13 @@ public class Molcule_Trigger : MonoBehaviour
     {
         if (count == Atom.Length && isActive && count2 == Atom.Length)
         {
+            if (EnterAtom.Count > 0)
+            {
+                foreach (GameObject atom in EnterAtom)
+                {
+                    Destroy(atom);
+                }
+            }
             if (isMoving)
             {
                 // 경과 시간 업데이트
