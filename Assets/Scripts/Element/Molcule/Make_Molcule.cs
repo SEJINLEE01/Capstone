@@ -29,10 +29,7 @@ public class Make_Molcule : MonoBehaviour
             if (elapsedTime > duration)
             {
                 GetComponent<Molcule_Trigger>().enabled = false;
-                foreach (GameObject atom in trigger.EnterAtom)
-                {
-                    Destroy(atom);
-                }
+                
                 foreach (GameObject atom in trigger.Atom)
                 {
                     Destroy(atom);

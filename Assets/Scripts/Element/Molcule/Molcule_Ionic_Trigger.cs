@@ -8,6 +8,7 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
 {
     public GameObject[] Atom;
     int count = 0;
+    int count2 = 0;
     public Transform[] ToObj;
     public Transform[] FromObj;
     public float DelayTime;
@@ -34,6 +35,8 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
         {
             return; // 스크립트가 비활성화된 상태라면 메서드를 종료
         }
+
+        count2++;
         foreach (var atom in Atom)
         {
             if (atom == null)
@@ -63,6 +66,8 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
         {
             return; // 스크립트가 비활성화된 상태라면 메서드를 종료
         }
+
+        count2--;
         foreach (var atom in Atom)
         {
             if (other.CompareTag(atom.name))
@@ -76,12 +81,20 @@ public class Molcule_Ionic_Trigger : MonoBehaviour
                 }
             }
         }
+        elapsedTime = 0f;
     }
 
     private void Update()
     {
-        if (count == Atom.Length && isActive)
+        if (count == Atom.Length && isActive && count2 == Atom.Length)
         {
+            if (EnterAtom.Count > 0)
+            {
+                foreach (GameObject atom in EnterAtom)
+                {
+                    Destroy(atom);
+                }
+            }
             if (isMoving)
             {
                 // 경과 시간 업데이트
