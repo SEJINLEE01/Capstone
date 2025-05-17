@@ -9,7 +9,6 @@ public class cshCheckAtom : MonoBehaviour
     {
         public string tagName; // 원소 태그 이름
         public GameObject canvasPrefab;
-        
         public GameObject periodPrefab;
         
     }
@@ -20,18 +19,80 @@ public class cshCheckAtom : MonoBehaviour
 
     private Dictionary<string, GameObject> spawnedCanvasDict = new Dictionary<string, GameObject>();
     private Dictionary<string, GameObject> spawnedPeriodDict = new Dictionary<string, GameObject>();
-    bool isCheck = false;
+
+    private string currentActiveTag = null;
+    private Queue<string> tagQueue = new Queue<string>();
+
+    /*void OnCollisionEnter(Collision coll)
+    {
+        Debug.Log("충돌된 오브젝트 이름: " + coll.gameObject.name);
+
+        foreach (var element in elements)
+        {
+            if (coll.gameObject.CompareTag(element.tagName))
+            {
+                // 이미 다른 원소가 활성화되어 있으면 무시
+                if (currentActiveTag != null && currentActiveTag != element.tagName)
+                {
+                    Debug.LogWarning("이미 " + currentActiveTag + "가 활성화되어 있어서 " + element.tagName + "는 무시됨");
+                    return;
+                }
+
+                // 아직 아무것도 활성화 안 된 경우 → UI 생성
+                if (currentActiveTag == null)
+                {
+                    InstantiateCanvas(element);
+                    InstantiatePeriod(element);
+                    currentActiveTag = element.tagName;
+                    Debug.Log("현재 활성 원소는: " + currentActiveTag);
+                }
+            }
+        }
+    }
+
+
+    void OnCollisionExit(Collision coll)
+    {
+        foreach (var element in elements)
+        {
+            if (coll.gameObject.CompareTag(element.tagName))
+            {
+                if (currentActiveTag == element.tagName)
+                {
+                    DestroyCanvas(element.tagName);
+                    DestroyPeriod(element.tagName);
+                    currentActiveTag = null;
+                }
+            }
+        }
+    }*/
 
     void OnCollisionEnter(Collision coll)
     {
         Debug.Log("충돌된 오브젝트 이름: " + coll.gameObject.name);
+
         foreach (var element in elements)
         {
-            if (coll.gameObject.CompareTag(element.tagName) && !isCheck)
+            if (coll.gameObject.CompareTag(element.tagName))
             {
-                InstantiateCanvas(element);
-                InstantiatePeriod(element);
-                isCheck = true;
+                // 중복된 태그가 큐에 이미 있으면 무시
+                if (tagQueue.Contains(element.tagName))
+                {
+                    Debug.Log($"{element.tagName} 이미 큐에 있음");
+                    return;
+                }
+
+                // 큐에 등록
+                tagQueue.Enqueue(element.tagName);
+                Debug.Log($"{element.tagName} 큐에 등록됨");
+
+                // 현재 UI가 없으면 바로 이 태그를 활성화
+                if (currentActiveTag == null)
+                {
+                    InstantiateCanvas(element);
+                    InstantiatePeriod(element);
+                    currentActiveTag = element.tagName;
+                }
             }
         }
     }
@@ -42,40 +103,49 @@ public class cshCheckAtom : MonoBehaviour
         {
             if (coll.gameObject.CompareTag(element.tagName))
             {
-                DestroyCanvas(element.tagName);
-                DestroyPeriod(element.tagName);
-            }
-        }
-        isCheck = false;
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        // 충돌된 오브젝트 이름을 콘솔에 출력
-        Debug.Log("트리거 충돌된 오브젝트 이름: " + other.gameObject.name);
+                if (currentActiveTag == element.tagName)
+                {
+                    DestroyCanvas(element.tagName);
+                    DestroyPeriod(element.tagName);
 
-        // 원소 리스트를 반복하여, 충돌한 오브젝트의 태그와 일치하는 원소가 있으면 작업을 진행
-        foreach (var element in elements)
-        {
-            if (other.gameObject.CompareTag(element.tagName) && !isCheck)
-            {
-                // 해당 원소에 맞는 캔버스 및 주기 인스턴스를 생성
-                InstantiateCanvas(element);
-                InstantiatePeriod(element);
-                isCheck = true;
+                    currentActiveTag = null;
+                    tagQueue.Dequeue(); // 현재 빠진 태그 제거
+
+                    // 대기 중인 다음 태그가 있으면 띄움
+                    if (tagQueue.Count > 0)
+                    {
+                        string nextTag = tagQueue.Peek(); // 다음 태그 확인
+
+                        // elements에서 다시 찾아야 함
+                        ElementData nextElement = elements.Find(e => e.tagName == nextTag);
+                        if (nextElement != null)
+                        {
+                            InstantiateCanvas(nextElement);
+                            InstantiatePeriod(nextElement);
+                            currentActiveTag = nextTag;
+                            Debug.Log("새로운 활성 원소는: " + currentActiveTag);
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("대기 중인 태그 없음");
+                    }
+                }
+                else
+                {
+                    // 나갔지만 UI를 띄운 태그는 아니면 큐에서 그냥 제거
+                    Queue<string> tempQueue = new Queue<string>();
+                    while (tagQueue.Count > 0)
+                    {
+                        string tag = tagQueue.Dequeue();
+                        if (tag != element.tagName)
+                            tempQueue.Enqueue(tag);
+                    }
+                    tagQueue = tempQueue;
+                    Debug.Log($"{element.tagName} 큐에서 제거됨 (비활성 상태였음)");
+                }
             }
         }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        foreach (var element in elements)
-        {
-            if (other.gameObject.CompareTag(element.tagName))
-            {
-                DestroyCanvas(element.tagName);
-                DestroyPeriod(element.tagName);
-            }
-        }
-        isCheck = false;
     }
 
 
@@ -116,6 +186,8 @@ public class cshCheckAtom : MonoBehaviour
             Debug.LogWarning(element.tagName + " : periodPrefab 또는 periodPos가 할당되지 않았습니다!");
         }
     }
+
+
 
     void DestroyPeriod(string tagName)
     {
