@@ -44,5 +44,7 @@ public class cshAddList : MonoBehaviour
     public void GetList(int i)
     {
         checkButton.reaction = reactions[i];
+
+        checkButton.currentProblemIndex = i; // 별 저장용
     }
 }

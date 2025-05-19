@@ -161,6 +161,10 @@ public class CheckButton : MonoBehaviour
     //Reaction.cs라는 스크립트 있음
     public Reaction reaction;
 
+
+    public StarManager starManager;
+    public int currentProblemIndex;
+
     // 버튼 눌렀을 때 호출
     public void RunReactionCheck()
     {
@@ -189,6 +193,10 @@ public class CheckButton : MonoBehaviour
             SetActiveUIElements(LeftUI, true);
             SetActiveUIElements(RightUI, true);
             SetActiveUIElements(CorrectUI, true);
+
+            // 여기에 별 보이게 하기
+            starManager.ShowStarByIndex(currentProblemIndex); // 문제 인덱스 기반 별 표시
+
             return;
         }
         else if (Match(leftAtoms, reaction.atomInput))
