@@ -146,6 +146,7 @@
 //        return true;
 //    }
 //}
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -163,7 +164,10 @@ public class CheckButton : MonoBehaviour
 
 
     public StarManager starManager;
+    public AtomManager atomManager;
     public int currentProblemIndex;
+    public int index;
+
 
     // 버튼 눌렀을 때 호출
     public void RunReactionCheck()
@@ -196,7 +200,17 @@ public class CheckButton : MonoBehaviour
 
             // 여기에 별 보이게 하기
             starManager.ShowStarByIndex(currentProblemIndex); // 문제 인덱스 기반 별 표시
-
+            atomManager.ShowAtom(index);
+            if (index < 2)
+            {
+                index++;
+                Debug.Log("인덱스 값 " + index);
+            }
+            else
+            {
+                index += 2;
+                Debug.Log("인덱스 값 " + index);
+            }
             return;
         }
         else if (Match(leftAtoms, reaction.atomInput))
