@@ -23,7 +23,7 @@ public class cshAddList : MonoBehaviour
             new Reaction(new Dictionary<string, int> { { "Si", 1 }, { "O2", 1 } }, new Dictionary<string, int> {  { "SiO2", 1 } }),
             
             // CH4 + 2O2 ¡æ CO2 + 2H2O
-            new Reaction(new Dictionary<string, int> { { "CH4", 4 },{"O2",2 } }, new Dictionary<string, int> { { "CO2", 1 },  { "H2O", 2 } }),
+            new Reaction(new Dictionary<string, int> { { "CH4", 4 },{"O2",2 } }, new Dictionary<string, int> { { "CO2", 1 },  { "H2O", 4 } }),
 
             // 2Al + 3Cl2 ¡æ 2AlCl3
             new Reaction(new Dictionary<string, int> { { "Al", 2 }, { "Cl2", 3 } }, new Dictionary<string, int> { { "AlCl3", 2 }}),
