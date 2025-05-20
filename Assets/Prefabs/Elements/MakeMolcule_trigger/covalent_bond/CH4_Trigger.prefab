@@ -2355,13 +2355,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a89179b1b802d41ac906e862c19841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToObj: {fileID: 4977113939267736905}
+  ToObj: {fileID: 7994360798760802333}
   FromObj: {fileID: 5120504406894663366}
   Trigger: {fileID: 3569478698473342551}
   electrons:
   - {fileID: 8343116526631080488}
-  Degree: 30
-  OnTarget: 1
+  Degree: 15
+  OnTarget: 0
 --- !u!1 &8584446906897241608
 GameObject:
   m_ObjectHideFlags: 0
