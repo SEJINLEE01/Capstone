@@ -5,6 +5,7 @@ using UnityEngine;
 public class AtomManager : MonoBehaviour
 {
     public GameObject[] atomsObjects;
+    public GameObject[] MolculeMini;
 
     public void ShowAtom(int startIndex)
     {
@@ -19,6 +20,7 @@ public class AtomManager : MonoBehaviour
             if (startIndex >= 0 && startIndex < atomsObjects.Length)
             {
                 Debug.Log($" -> 활성화: atomsObjects[{startIndex}]");
+                MolculeMini[startIndex].SetActive(true);
                 atomsObjects[startIndex].SetActive(true);
             }
             else
@@ -37,6 +39,7 @@ public class AtomManager : MonoBehaviour
                 {
                     Debug.Log($" -> 활성화: atomsObjects[{idx}]");
                     atomsObjects[idx].SetActive(true);
+                    MolculeMini[startIndex].SetActive(true);
                 }
                 else
                 {
