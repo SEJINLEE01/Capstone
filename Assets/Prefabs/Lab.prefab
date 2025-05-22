@@ -15121,11 +15121,16 @@ PrefabInstance:
     - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
+        type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
@@ -15135,8 +15140,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
         type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
+        type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ProgressUpdate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
+        type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: UpdateText
       objectReference: {fileID: 0}
     - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
         type: 3}
@@ -15145,7 +15160,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
         type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: H2OTxt, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
+        type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291811487152005452, guid: 6c9037e4201aa554190897643a7616e0,
+        type: 3}
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
