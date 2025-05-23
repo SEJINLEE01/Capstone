@@ -26,7 +26,7 @@ public class H2OTxt : MonoBehaviour
         {
             if (CorrectUI[i].activeSelf)
             {
-                Correcttxt[i].text = "\r\n화학 반응식을 완성했습니다!\r\nC +  O<sub>2</sub> →CO<sub>2</sub>";
+                Correcttxt[i].text = "화학 반응식을 완성했습니다!\r\nC +  O<sub>2</sub> →CO<sub>2</sub>";
                 Correcttxt[i].color = Color.green;
             }
         }
@@ -66,7 +66,7 @@ public class H2OTxt : MonoBehaviour
         {
             if (CorrectUI[i].activeSelf)
             {
-                Correcttxt[i].text = "\"화학 반응식을 완성했습니다!\\r\\n2Al + 3Cl<sub>2</sub> → 2AlCl<sub>3</sub>\"";
+                Correcttxt[i].text = "화학 반응식을 완성했습니다!\r\n2Al + 3Cl<sub>2</sub> → 2AlCl<sub>3</sub>";
                 Correcttxt[i].color = Color.green;
             }
         }

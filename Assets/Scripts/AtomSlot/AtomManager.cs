@@ -39,7 +39,7 @@ public class AtomManager : MonoBehaviour
                 {
                     Debug.Log($" -> È°¼ºÈ­: atomsObjects[{idx}]");
                     atomsObjects[idx].SetActive(true);
-                    MolculeMini[startIndex].SetActive(true);
+                    MolculeMini[idx].SetActive(true);
                 }
                 else
                 {
