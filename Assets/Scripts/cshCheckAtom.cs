@@ -15,57 +15,13 @@ public class cshCheckAtom : MonoBehaviour
     public Transform canvasPos;
     public Transform periodPos;
 
-    public List<ElementData> elements = new List<ElementData>(); // 20개 저장할 리스트
+    public List<ElementData> elements = new List<ElementData>(); // 37개 저장할 리스트
 
     private Dictionary<string, GameObject> spawnedCanvasDict = new Dictionary<string, GameObject>();
     private Dictionary<string, GameObject> spawnedPeriodDict = new Dictionary<string, GameObject>();
 
     private string currentActiveTag = null;
     private Queue<string> tagQueue = new Queue<string>();
-
-    /*void OnCollisionEnter(Collision coll)
-    {
-        Debug.Log("충돌된 오브젝트 이름: " + coll.gameObject.name);
-
-        foreach (var element in elements)
-        {
-            if (coll.gameObject.CompareTag(element.tagName))
-            {
-                // 이미 다른 원소가 활성화되어 있으면 무시
-                if (currentActiveTag != null && currentActiveTag != element.tagName)
-                {
-                    Debug.LogWarning("이미 " + currentActiveTag + "가 활성화되어 있어서 " + element.tagName + "는 무시됨");
-                    return;
-                }
-
-                // 아직 아무것도 활성화 안 된 경우 → UI 생성
-                if (currentActiveTag == null)
-                {
-                    InstantiateCanvas(element);
-                    InstantiatePeriod(element);
-                    currentActiveTag = element.tagName;
-                    Debug.Log("현재 활성 원소는: " + currentActiveTag);
-                }
-            }
-        }
-    }
-
-
-    void OnCollisionExit(Collision coll)
-    {
-        foreach (var element in elements)
-        {
-            if (coll.gameObject.CompareTag(element.tagName))
-            {
-                if (currentActiveTag == element.tagName)
-                {
-                    DestroyCanvas(element.tagName);
-                    DestroyPeriod(element.tagName);
-                    currentActiveTag = null;
-                }
-            }
-        }
-    }*/
 
     void OnCollisionEnter(Collision coll)
     {

@@ -2125,6 +2125,21 @@ PrefabInstance:
       propertyPath: _transformFeatureStateProvider
       value: 
       objectReference: {fileID: 1429730216}
+    - target: {fileID: 5678706539343701399, guid: fab1d71d53e81194d8773a8f8751ce96,
+        type: 3}
+      propertyPath: _transformFeatureConfigs._values.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678706539343701399, guid: fab1d71d53e81194d8773a8f8751ce96,
+        type: 3}
+      propertyPath: _transformFeatureConfigs._values.Array.data[0]._state
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678706539343701399, guid: fab1d71d53e81194d8773a8f8751ce96,
+        type: 3}
+      propertyPath: _transformFeatureConfigs._values.Array.data[0]._feature
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5857158323137516176, guid: fab1d71d53e81194d8773a8f8751ce96,
         type: 3}
       propertyPath: m_Name
@@ -9939,7 +9954,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 133929214}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2408706114787803220, guid: debb7590f614be9419096fe171dac1b1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debb7590f614be9419096fe171dac1b1, type: 3}
