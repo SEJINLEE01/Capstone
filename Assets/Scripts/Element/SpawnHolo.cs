@@ -16,7 +16,7 @@ public class SpawnHolo : MonoBehaviour
     }
     private void Update()
     {
-        HoloPrefab.transform.position = HandTransform.position + new Vector3(0, 0.2f, 0);
+        HoloPrefab.transform.position = Head.transform.position + Head.transform.forward * 0.4f;
         HoloPrefab.transform.rotation = Head.transform.rotation;
     }
     public void Spawn(){
