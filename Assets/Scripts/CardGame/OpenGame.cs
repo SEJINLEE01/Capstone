@@ -21,9 +21,10 @@ public class OpenGame : MonoBehaviour
             return;
 
         if(collision.gameObject.layer==LayerMask.NameToLayer("Molcule")){
+            string ObjectTag = collision.gameObject.tag;
             if (tagList.Contains(ObjectTag)) //리스트에 있는 태그가 있다면
             {
-                string ObjectTag = collision.gameObject.tag;
+                
                 CardType cardToSpawn =(CardType)Enum.Parse(typeof(CardType), ObjectTag);
 
                 Destroy(collision.gameObject);  //충돌한 오브젝트 삭제
