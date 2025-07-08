@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float Speed = 1f;      // 속도
     public float move = 0.3f; // 위아래 움직이는 거리
-
+   
     private Vector3 startPos;
 
     void Start()
