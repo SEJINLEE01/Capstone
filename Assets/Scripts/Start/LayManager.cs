@@ -5,11 +5,13 @@ using UnityEngine;
 public class LayManager : MonoBehaviour
 {   
     public Change_Material[] Cm;
-    public GameObject gameObject;
+    public GameObject[] gameObject;
     public void Operation(){
         foreach(Change_Material cm in Cm){
             cm.Change();
         }
-        gameObject.SetActive(true);
+        foreach(GameObject go in gameObject){
+            go.SetActive(true);
+        }
     }
 }
