@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3289800047928875806}
   - component: {fileID: 5140469101910931407}
+  - component: {fileID: -7121964918295548049}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -50,6 +51,19 @@ MonoBehaviour:
   SelectUI: {fileID: 3340495320915765287}
   AttackUI: {fileID: 5772519309130243340}
   DefeatUI: {fileID: 8715280609867769463}
+  IMDraw: {fileID: -7121964918295548049}
+--- !u!114 &-7121964918295548049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142239237561018253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83ceba3802a20045b2f0bb235558415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1969066348560018166
 PrefabInstance:
   m_ObjectHideFlags: 0
