@@ -16,7 +16,12 @@ public class GameManager : MonoBehaviour
     bool Attack = false; //공격버튼을 눌렀을 때
     bool Attacking = false; // 실제로 몬스터를 카드로 공격할 때
     bool Draw = false; // 드로우 버튼을 눌렀을 때
-    
+
+    public imsi_Draw IMDraw; //임시로 만들어놓은 드로우
+
+    private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
+    private const float debounceTime = 0.2f; // 0.2초 내의 중복 클릭 무시
+
     GameObject pos; // 원래 실험실의 위치
     GameObject PlayerPos; // vr카메라의 위치
     void Start()
@@ -78,6 +83,21 @@ public class GameManager : MonoBehaviour
         Attacking = true;
     }
 
+    public void DrawButton(){ // 드로우 버튼을 눌렀을 때
+        if (Time.time - lastDrawButtonClickTime < debounceTime) //무슨 버그인지 모르겠지만 얘만 두번씩 실행되서 임의로 막음
+        {
+            //Debug.Log("DrawButton: 디바운스 처리됨 (중복 클릭 무시)"); 
+            return;
+        }
+
+        lastDrawButtonClickTime = Time.time; // 현재 시간으로 마지막 클릭 시간 업데이트
+
+        Debug.Log("드로우를 합니다."); // 드로우 로직이 들어가야함
+        IMDraw.Draw();
+        IMDraw.PrintRemainingDeck();
+        Draw = true;
+    }
+
     public void ReStartButton(){
         turn = 1; // 턴 초기화
         Hp = PHp; // Hp초기화
@@ -91,8 +111,5 @@ public class GameManager : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void DrawButton(){ // 드로우 버튼을 눌렀을 때
-        Debug.Log("드로우를 합니다."); // 드로우 로직이 들어가야함
-        Draw = true;
-    }
+    
 }
