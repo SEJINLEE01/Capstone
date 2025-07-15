@@ -7,6 +7,9 @@ public class OpenGame : MonoBehaviour
 {
     public GameObject[] Card;
     public GameObject[] SpawnPoint;
+
+    [HideInInspector]
+    public bool trigger=false;
     List<string> tagList = new List<string>
     {
         "H2","F2","N2","O2","SiO2","NH3","H2O","HCl","CO2","AlCl3","CH4","Cl2","CaF2","LiCl","MgO","NaCl","NaF"
@@ -33,5 +36,8 @@ public class OpenGame : MonoBehaviour
                 SpawnNum++; //넣은 개수 표기
             }
         }
+        
+        if(SpawnNum==5)
+            trigger=true;
     }
 }
