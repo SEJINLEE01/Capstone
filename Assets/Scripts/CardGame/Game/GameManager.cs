@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     bool Attacking = false; // 실제로 몬스터를 카드로 공격할 때
     bool Draw = false; // 드로우 버튼을 눌렀을 때
 
-    public imsi_Draw IMDraw; //임시로 만들어놓은 드로우
+    public MyDraw mydraw; //드로우
 
     private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
     private const float debounceTime = 0.2f; // 0.2초 내의 중복 클릭 무시
@@ -41,11 +41,15 @@ public class GameManager : MonoBehaviour
             Attacking = false;
             Draw = false;
             
+            //몬스터 소환
+
+
             Debug.Log("게임이 시작되었습니다 턴" + turn);
             yield return new WaitUntil(() => Attack || Draw);
             SelectUI.SetActive(false);
             if(AttackUI.activeSelf){
                 Debug.Log("공격을 시도합니다.");
+                //어떤 몬스터를 선택해서 공격할지
                 yield return new WaitUntil(() => Attacking);
                 AttackUI.SetActive(false);
             }
@@ -93,8 +97,8 @@ public class GameManager : MonoBehaviour
         lastDrawButtonClickTime = Time.time; // 현재 시간으로 마지막 클릭 시간 업데이트
 
         Debug.Log("드로우를 합니다."); // 드로우 로직이 들어가야함
-        IMDraw.Draw();
-        IMDraw.PrintRemainingDeck();
+        mydraw.Draw();
+        mydraw.PrintRemainingDeck();
         Draw = true;
     }
 

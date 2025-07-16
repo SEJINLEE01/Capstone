@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class imsi_Draw : MonoBehaviour
+public class MyDraw : MonoBehaviour
 {
     private List<string> Deck = new List<string>();
     private int TotalCardCount;
@@ -54,7 +54,7 @@ public class imsi_Draw : MonoBehaviour
         string drawnCard = Deck[randomIndex]; 
         Deck.RemoveAt(randomIndex); 
         TotalCardCount--;
-        Debug.Log($"'{drawnCard}' 카드를 드로우했습니다. 남은 카드: {Deck.Count}장.");
+        Debug.Log($"남은 카드: {Deck.Count}장.");
         return drawnCard;
     }
 
