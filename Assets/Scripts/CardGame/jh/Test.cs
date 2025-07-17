@@ -1,22 +1,25 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Oculus.Interaction;
 public class Test : MonoBehaviour
 {
-    public GameObject Molo;
+    public InteractableUnityEventWrapper wrapper; 
 
-
-    public void btntest()
+    void Start()
     {
-        if (Molo.tag == "H2O")
-        {
-            Debug.Log("Hello");
-        }
-        if(Molo.tag == "CH4")
-        {
-            Debug.Log ("bye");
-        }
+        if (wrapper == null)
+            wrapper = GetComponent<InteractableUnityEventWrapper>();
+
+        wrapper.WhenSelect.AddListener(OnSelected);
     }
+
+    void OnSelected()
+    {
+        RayManager.Instance.SetSelectedObject(this.gameObject);
+    }
+
+
+
 
 }

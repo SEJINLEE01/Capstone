@@ -2139,19 +2139,7 @@ MonoBehaviour:
       m_Calls: []
   _whenSelect:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 258922934}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: btntest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _whenUnselect:
     m_PersistentCalls:
       m_Calls: []
@@ -2179,7 +2167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0498dcbcce54b4fae50196b1cc6c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Molo: {fileID: 258922926}
+  wrapper: {fileID: 258922933}
 --- !u!1 &265221673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5896,13 +5884,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 272164939456255212, guid: 33f044a77aebe4544a5968186a928d7d,
         type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 272164939456255212, guid: 33f044a77aebe4544a5968186a928d7d,
+        type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 1263794874624199827, guid: 33f044a77aebe4544a5968186a928d7d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.321
       objectReference: {fileID: 0}
     - target: {fileID: 1263794874624199827, guid: 33f044a77aebe4544a5968186a928d7d,
         type: 3}
@@ -6025,19 +6018,7 @@ MonoBehaviour:
       m_Calls: []
   _whenSelect:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 696960467}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: btntest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _whenUnselect:
     m_PersistentCalls:
       m_Calls: []
@@ -6099,7 +6080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0498dcbcce54b4fae50196b1cc6c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Molo: {fileID: 696960462}
+  wrapper: {fileID: 696960464}
 --- !u!65 &696960470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6115,7 +6096,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11967,7 +11948,7 @@ PrefabInstance:
     - target: {fileID: 1792492426181400442, guid: 29b5f395d565a074f8e40a8a80f4e5bd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.302
+      value: -0.164
       objectReference: {fileID: 0}
     - target: {fileID: 1792492426181400442, guid: 29b5f395d565a074f8e40a8a80f4e5bd,
         type: 3}
@@ -15145,7 +15126,7 @@ GameObject:
   - component: {fileID: 2030582280}
   - component: {fileID: 2030582281}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: RayManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
