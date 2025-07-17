@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     int turn = 1; //몇 턴인지 확인
     int maxTurn=10; //최대 턴 (엔딩까지 몇턴인가)
-    int Hp; // 게임에서 사용되는 플레이어 체력
+    [HideInInspector]
+    public int Hp; // 게임에서 사용되는 플레이어 체력
     int PHp = 3; // 플레이어의 최대체력
     public GameObject SelectUI; // 공격 or 드로우 선택 UI
     public GameObject AttackUI; // 공격 선택 후, 실제로 공격을 하기위한 UI
@@ -22,10 +23,18 @@ public class GameManager : MonoBehaviour
     private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
     private const float debounceTime = 0.2f; // 0.2초 내의 중복 클릭 무시
 
+    public List<GameObject> Monsters = new List<GameObject>(); // 몬스터를 관리하는 리스트 사실상 사용하는 것은 오브젝트의 GameMonster스크립트가 될거임 (임시로 public)
     GameObject pos; // 원래 실험실의 위치
     GameObject PlayerPos; // vr카메라의 위치
+
+    public static GameManager Instance { get; private set; } // 싱글톤
     void Start()
     {   
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
         Hp = PHp;
         PlayerPos = GameObject.Find("Camera Rig");
         pos = GameObject.Find("Lab Pos");
@@ -53,11 +62,24 @@ public class GameManager : MonoBehaviour
                 yield return new WaitUntil(() => Attacking);
                 AttackUI.SetActive(false);
             }
+
             Debug.Log("몬스터의 턴이 시작됩니다"); // 몬스터들의 몇턴뒤 공격하고 그런로직이 들어가야함
-            if(Hit()){ // 여기에다가 몬스터들의 턴관리 로직이 들어가야함
-                DefeatProcess();
-                yield break;
+            // 여기에다가 몬스터들의 턴관리 로직이 들어가야함
+            foreach(GameObject monster in Monsters){ //공격할 턴이 된 몬스터들은 공격을 시도
+                GameMonster monsterScript = monster.GetComponent<GameMonster>();
+                monsterScript.AddTurn();
+                if(monsterScript.CheckAttackTurn()){
+                    monsterScript.Attack();
+                    Debug.Log("남은체력 : " + Hp); 
+                    if(Hp<=0){
+                        DefeatProcess();
+                        yield break;
+                    }
+                    
+                    monsterScript.ResetAttackTurn();
+                }
             }
+    
             yield return new WaitForSeconds(1f);
             Debug.Log("모든 턴이 끝났습니다.");
             turn++;
@@ -67,15 +89,6 @@ public class GameManager : MonoBehaviour
     void DefeatProcess(){ // 몬스터한테 죽었을 경우 실행될 프로세스
         Debug.Log("사망하였습니다"); // 여기서 돌아갈지 다시시작할건지를 나타내는 UI를 띄우는 로직
         DefeatUI.SetActive(true);
-    }
-
-    bool Hit(){
-        Debug.Log("공격을 당했습니다.");
-        Hp--; // 몬스터의 공격력과 연계되는 함수가 들어와야함
-        if(Hp<=0)
-            return true;
-
-        return false;
     }
 
     public void AttackButton(){ // 어택버튼을 눌렀을 때
