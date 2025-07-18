@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83ceba3802a20045b2f0bb235558415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPrefabs:
+  - symbol: H
+    prefab: {fileID: 1308402735524995971, guid: 2122c6b84402fb340bcf64af8e93c011,
+      type: 3}
+  cardSpawnParent: {fileID: 0}
+  spawnOffset: {x: 0, y: 0, z: 0}
   cardUIs:
   - symbol: H
     textUI: {fileID: 0}
