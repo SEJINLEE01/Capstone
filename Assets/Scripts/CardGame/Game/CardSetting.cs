@@ -11,6 +11,7 @@ public class CardSetting : MonoBehaviour
     {
         targetSnapInteractable = GetComponent<SnapInteractable>();
         targetSnapInteractable.WhenSelectingInteractorViewAdded += InteractorDetected;
+        targetSnapInteractable.WhenSelectingInteractorViewRemoved += InteractorDelete;
     }
     private void InteractorDetected(IInteractorView interactorView)
     {
@@ -18,8 +19,20 @@ public class CardSetting : MonoBehaviour
         {
             // SnapInteractor의 게임 오브젝트를 가져옵니다.
             GameObject snappedInteractorGameObject = snapInteractor.gameObject.transform.root.gameObject;
-            Debug.Log($"<color=green>SnapInteractable에 SnapInteractor가 성공적으로 스냅되었습니다!</color>");
-            Debug.Log($"붙은 SnapInteractor의 게임 오브젝트: <color=yellow>{snappedInteractorGameObject.name}</color>");
+            Debug.Log(snappedInteractorGameObject.name);
+            GameManager.Instance.AddCard(snappedInteractorGameObject);
+
+        }
+    }
+
+    private void InteractorDelete(IInteractorView interactorView)
+    {
+        if (interactorView is SnapInteractor snapInteractor)
+        {
+            // SnapInteractor의 게임 오브젝트를 가져옵니다.
+            GameObject snappedInteractorGameObject = snapInteractor.gameObject.transform.root.gameObject;
+            Debug.Log(snappedInteractorGameObject.name);
+            GameManager.Instance.RemoveCard(snappedInteractorGameObject);
 
         }
     }
