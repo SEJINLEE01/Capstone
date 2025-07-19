@@ -23,7 +23,10 @@ public class GameManager : MonoBehaviour
     private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
     private const float debounceTime = 0.2f; // 0.2초 내의 중복 클릭 무시
 
-    public List<GameObject> Monsters = new List<GameObject>(); // 몬스터를 관리하는 리스트 사실상 사용하는 것은 오브젝트의 GameMonster스크립트가 될거임 (임시로 public)
+    private List<GameObject> Monsters = new List<GameObject>(); // 몬스터가 소환되면 들어갈 리스트
+
+    private List<GameObject> SettingCard = new List<GameObject>(); // 카드가 세팅되면 들어갈 리스트
+
     GameObject pos; // 원래 실험실의 위치
     GameObject PlayerPos; // vr카메라의 위치
 
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
 
+        selectedObject = null; // 처음에 아무 몬스터도 선택되지않음을 표시
         Hp = PHp;
         PlayerPos = GameObject.Find("Camera Rig");
         pos = GameObject.Find("Lab Pos");
@@ -97,6 +101,29 @@ public class GameManager : MonoBehaviour
     }
 
     public void AttackingButton(){ // 카드세팅 후 실질적인 공격
+        if (SettingCard.Count == 0 || selectedObject == null) //카드를 세팅하지않았다면 공격버튼을 눌러도 공격이 나가지않도록 or 몬스터를 선택하지않았다면
+            return;
+        
+        if (Time.time - lastDrawButtonClickTime < debounceTime) //무슨 버그인지 모르겠지만 얘만 두번씩 실행되서 임의로 막음
+        {
+            //Debug.Log("DrawButton: 디바운스 처리됨 (중복 클릭 무시)"); 
+            return;
+        }
+
+        lastDrawButtonClickTime = Time.time; // 현재 시간으로 마지막 클릭 시간 업데이트
+
+        GameMonster Gms = selectedObject.GetComponent<GameMonster>();
+
+        int attack = 0; // 세팅된 카드들의 공격력 합
+
+        foreach(GameObject Card in SettingCard)
+        {
+            attack += Card.GetComponent<GameCard>().CalculateAttackPower();
+            Destroy(Card);
+        }
+        Gms.Attacked(attack);
+        Gms.isDie();
+        SettingCard.Clear();
         Attacking = true;
     }
 
@@ -115,22 +142,39 @@ public class GameManager : MonoBehaviour
         Draw = true;
     }
 
-    public void ReStartButton(){
+    public void ReStartButton(){ //다시시작
+        // 초기화 함수를 만들고 추가해야함
         turn = 1; // 턴 초기화
         Hp = PHp; // Hp초기화
         StartCoroutine(GameLoop());
         Debug.Log("게임을 다시 시작합니다");
     }
     
-    public void EndButton(){
-        Debug.Log("종료");
+    public void EndButton(){ // 종료버튼
+        Debug.Log("종료"); 
         PlayerPos.transform.position = pos.transform.position;
         Destroy(gameObject);
+        //추가되어야할것 게임과 관련된 모든 오브젝트를 전부 없앤다.
     }
 
     public void SetSelectedObject(GameObject obj) //선택된 오브젝트
+    { 
+        selectedObject = obj; // 해당 몬스터가 선택됨
+        Debug.Log(selectedObject.gameObject.name);
+    }
+
+    public void MonsterDie(GameObject monster) //몬스터가 죽었을때
     {
-        selectedObject = obj; // 여기서 선택됐을때 로직 짜면 될듯
-        Debug.Log("선택된 오브젝트: " + obj.name);
+        Monsters.Remove(monster);
+    }
+
+    public void AddCard(GameObject card) //카드가 세팅됐을때 추가하는 로직
+    {
+        SettingCard.Add(card);
+    }
+
+    public void RemoveCard(GameObject card) //카드 세팅빠졌을때 제거
+    {
+        SettingCard.Remove(card);
     }
 }

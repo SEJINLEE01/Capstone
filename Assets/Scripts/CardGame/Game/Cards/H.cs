@@ -10,11 +10,6 @@ public class H : GameCard
         atomic_mass = 1;
         symbol = "H";
         isNobleGas = false; // 수소는 비활성 기체가 아님
-        GetAttack();
     }
         // + 추가될 함수 변수
-    public void GetAttack()
-    {
-        Debug.Log(symbol+"의 공격력은"+CalculateAttackPower());
-    }
 }
