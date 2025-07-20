@@ -4,80 +4,89 @@ using UnityEngine;
 
 public class MoleculeSpawner : MonoBehaviour
 {
-    // 분자 프리팹들 => AlCl3, CaF2, Cl2, SiO2 순서로 등록해야 함
-    public GameObject[] moleculePrefabs;
+    public GameObject[] SmallMolcule; // 작은분자
+    public GameObject[] MiddleMolcule; // 중간분자
+    public GameObject[] LargeMolcule; // 큰분자
 
     // 분자가 소환될 수 있는 위치들 (Transform 배열로 여러 위치 등록 가능)
     public Transform[] spawnPoints;
-
-    // 턴 사이의 대기 시간 (초 단위)
-    public float delayBetweenTurns = 2f;
-
-    // 현재 진행 중인 턴 번호 (0부터 시작)
-    private int cycle = 0;
-
-    // 게임 시작 시 호출되는 함수
-    void Start()
+    [HideInInspector]
+    public bool[] isSpawned;
+    public int S, M, L; // inspector에서 소환하는 몬스터수를 정할 수 있게
+    
+    private Queue<GameObject> Monsters = new Queue<GameObject>();
+    private void Start()
     {
-        // 턴마다 분자를 자동으로 소환하는 코루틴 시작
-        StartCoroutine(GameTurnRoutine());
-    }
+        isSpawned = new bool[spawnPoints.Length];
+        for(int i=0;i<isSpawned.Length;i++)
+            isSpawned[i] = false;
 
-    // 턴마다 분자를 소환하고 일정 시간 대기하는 루틴
-    IEnumerator GameTurnRoutine()
-    {
-        // 게임 시작 전 약간의 대기 시간
-        yield return new WaitForSeconds(2f);
-
-        // 총 3턴까지 반복 (cycle: 0, 1, 2)
-        while (cycle < 3)
+        for (int i = 0; i < S; i++)
         {
-            StartNextCycle(); // 현재 턴에 해당하는 분자 소환
-            cycle++; // 다음 턴으로 이동
-            yield return new WaitForSeconds(delayBetweenTurns); // 1분 대기 -> 한 턴마다 1분씩 주어짐
+            SpawnSmall();
         }
-        Debug.Log("모든 턴이 끝났습니다.");
-    }
-
-    // 현재 턴에 맞는 분자(몬스터)들을 소환하는 함수
-    void StartNextCycle()
-    {
-        switch (cycle)
+        for (int i = 0; i < M; i++)
         {
-            case 0:
-                // 1턴: AlCl3, CaF2 소환
-                SpawnMolecule(0); // AlCl3
-                SpawnMolecule(1); // CaF2
-                break;
-            case 1:
-                // 2턴: Cl2 소환
-                SpawnMolecule(2); // Cl2
-                break;
-            case 2:
-                // 3턴: SiO2 소환
-                SpawnMolecule(3); // SiO2
-                break;
-            default:
-                // 턴이 모두 끝났을 때
-                Debug.Log("모든 턴이 끝났습니다.");
-                break;
+            SpawnMiddle();
+        }
+        for (int i = 0; i < L; i++)
+        {
+            SpawnLarge();
         }
     }
 
-    // 지정된 인덱스의 분자 프리팹을 랜덤 위치에 소환하는 함수
-    void SpawnMolecule(int prefabIndex)
+    private void SpawnSmall() // 작은분자 몬스터를 소환하는 로직
     {
-        // 인덱스 유효성 검사
-        if (prefabIndex >= moleculePrefabs.Length)
+        int i = Random.Range(0, SmallMolcule.Length);
+        Monsters.Enqueue(SmallMolcule[i]);
+    }
+
+    private void SpawnMiddle() // 중간분자 몬스터를 소환하는 로직
+    {
+        int i = Random.Range(0, MiddleMolcule.Length);
+        Monsters.Enqueue(MiddleMolcule[i]);
+    }
+
+    private void SpawnLarge() // 큰분자 몬스터를 소환하는 로직
+    {
+        int i = Random.Range(0, LargeMolcule.Length);
+        Monsters.Enqueue(LargeMolcule[i]);
+    }
+
+    private bool AreAllSpawnPointsOccupied() //자리가 꽉차있는가 확인
+    {
+        foreach (bool value in isSpawned)
         {
-            Debug.LogWarning("잘못된 프리팹 인덱스");
-            return;
+            if (!value) // 하나라도 false(비어있는 자리)가 있으면
+            {
+                return false; // 모든 자리가 꽉 차지 않았음
+            }
+        }
+        return true; // 루프를 통과했으면 모든 자리가 꽉 찼음
+    }
+
+    public (GameObject monster,int? SpawnPos) SpawnMonster()
+    {
+        Debug.Log("몬스터가 스폰됨");
+        if (Monsters.Count == 0)
+            return (null,null);
+        Debug.Log("몬스터가 0마리가아님");
+        if (AreAllSpawnPointsOccupied())
+        {
+            Debug.Log("모든 스폰 자리가 꽉 차서 몬스터를 더 이상 스폰할 수 없습니다.");
+            return (null, null); // 자리가 꽉 찼으므로 반환
         }
 
-        // 랜덤 위치 선택
-        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Debug.Log("몬스터가 스폰22됨");
+        int i;
 
-        // 해당 위치에 프리팹 생성
-        Instantiate(moleculePrefabs[prefabIndex], spawnPoint.position, Quaternion.identity);
+        do
+        {
+            i = Random.Range(0, spawnPoints.Length);
+        } while (isSpawned[i]); //그 자리에 스폰이 되어있다면 다시 자리 뽑음
+
+        GameObject monster = Instantiate(Monsters.Dequeue(), spawnPoints[i].position, Quaternion.identity);
+        isSpawned[i] = true;
+        return (monster, i);
     }
 }
