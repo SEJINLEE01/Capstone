@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 //턴제 카드게임의 총관리 코드
 public class GameManager : MonoBehaviour
 {
     int turn = 1; //몇 턴인지 확인
-    int maxTurn=10; //최대 턴 (엔딩까지 몇턴인가)
+    int maxTurn=6; //최대 턴 (엔딩까지 몇턴인가)
     [HideInInspector]
     public int Hp; // 게임에서 사용되는 플레이어 체력
     int PHp = 3; // 플레이어의 최대체력
@@ -19,11 +20,12 @@ public class GameManager : MonoBehaviour
     bool Draw = false; // 드로우 버튼을 눌렀을 때
 
     public MyDraw mydraw; //드로우
+    public MoleculeSpawner Spawner; //몬스터 스폰
 
     private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
     private const float debounceTime = 0.2f; // 0.2초 내의 중복 클릭 무시
 
-    private List<GameObject> Monsters = new List<GameObject>(); // 몬스터가 소환되면 들어갈 리스트
+    private Dictionary<GameObject, int> Monsters = new Dictionary<GameObject, int>(); // 몬스터가 소환되면 들어갈 딕셔너리 <몬스터, 위치>
 
     private List<GameObject> SettingCard = new List<GameObject>(); // 카드가 세팅되면 들어갈 리스트
 
@@ -46,16 +48,19 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator GameLoop(){
-        for(int i=0;i<maxTurn;i++){ 
+        yield return new WaitForSeconds(1.0f); // 일단 스포너 기다리기 위해서 임시로 넣어놓음 튜토리얼추가되면 제거예정 
+        for (int i=0;i<maxTurn;i++){ 
             SelectUI.SetActive(true);
             AttackUI.SetActive(false);
             DefeatUI.SetActive(false);
             Attack = false; // 매턴이 지나면 bool변수 모두 초기화
             Attacking = false;
             Draw = false;
-            
-            //몬스터 소환
 
+            //몬스터 소환
+            (GameObject spawnedMonster, int? spawnedPosition) = Spawner.SpawnMonster();
+            if (spawnedMonster != null && spawnedPosition.HasValue)
+                Monsters.Add(spawnedMonster, spawnedPosition.Value);
 
             Debug.Log("게임이 시작되었습니다 턴" + turn);
             yield return new WaitUntil(() => Attack || Draw);
@@ -67,9 +72,8 @@ public class GameManager : MonoBehaviour
                 AttackUI.SetActive(false);
             }
 
-            Debug.Log("몬스터의 턴이 시작됩니다"); // 몬스터들의 몇턴뒤 공격하고 그런로직이 들어가야함
-            // 여기에다가 몬스터들의 턴관리 로직이 들어가야함
-            foreach(GameObject monster in Monsters){ //공격할 턴이 된 몬스터들은 공격을 시도
+            Debug.Log("몬스터의 턴이 시작됩니다"); 
+            foreach(GameObject monster in Monsters.Keys){ //공격할 턴이 된 몬스터들은 공격을 시도
                 GameMonster monsterScript = monster.GetComponent<GameMonster>();
                 monsterScript.AddTurn();
                 if(monsterScript.CheckAttackTurn()){
@@ -116,11 +120,16 @@ public class GameManager : MonoBehaviour
 
         int attack = 0; // 세팅된 카드들의 공격력 합
 
-        foreach(GameObject Card in SettingCard)
+        foreach(GameObject Card in SettingCard) // 순회가 도는동안 파괴가 되면 오류가나서 파괴와 계산을 분리
         {
             attack += Card.GetComponent<GameCard>().CalculateAttackPower();
-            Destroy(Card);
         }
+        foreach(GameObject DestroyCard in SettingCard.ToList())
+        {
+            Destroy(DestroyCard);
+        }
+        SettingCard.Clear();
+
         Gms.Attacked(attack);
         Gms.isDie();
         SettingCard.Clear();
@@ -165,6 +174,7 @@ public class GameManager : MonoBehaviour
 
     public void MonsterDie(GameObject monster) //몬스터가 죽었을때
     {
+        Spawner.isSpawned[Monsters[monster]] = false;
         Monsters.Remove(monster);
     }
 
@@ -177,4 +187,5 @@ public class GameManager : MonoBehaviour
     {
         SettingCard.Remove(card);
     }
+
 }

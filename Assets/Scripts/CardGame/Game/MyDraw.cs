@@ -44,11 +44,6 @@ public class MyDraw : MonoBehaviour
         }
 
         InitializeDeck();
-
-        for (int i = 0; i < 50; i++)/// 테스트용
-        {//////// 테스트
-            Draw(); /////// 태ㅅ  스트용
-        }///// 테스트용
     }
 
     public void InitializeDeck()

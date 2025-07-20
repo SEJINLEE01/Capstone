@@ -8,7 +8,7 @@ public class TurnLight : MonoBehaviour
     public float fadeDuration = 1.5f; // 색이 변하는 총 시간 (초)
     private Color startColor; // 시작 색상 (검은색)
     private Color endColor = new Color(140f / 255f, 140f / 255f, 140f / 255f, 1.0f); // 목표 색상 (R, G, B 각각 140/255f)
-    public GameObject light;
+    public GameObject Light;
     public GameObject pointlight;
     public LayManager LM; //기계들 메테리얼 관리
     public GameObject Hit_Lay; //카메라 레이 받는 객체
@@ -19,10 +19,10 @@ public class TurnLight : MonoBehaviour
     }
 
     public void TurnOn(){
-        if(light.activeSelf)
+        if(Light.activeSelf)
             return;
 
-        light.SetActive(true);
+        Light.SetActive(true);
         
         LM.Operation();
         StartCoroutine(FadeAmbientColor());

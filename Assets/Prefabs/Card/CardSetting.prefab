@@ -115,7 +115,6 @@ GameObject:
   - component: {fileID: 4957959547188910464}
   - component: {fileID: 6419749642529532410}
   - component: {fileID: 7547247934380350732}
-  - component: {fileID: -3689611172587826787}
   m_Layer: 0
   m_Name: CardSetting
   m_TagString: Untagged
@@ -237,15 +236,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-3689611172587826787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7827320384438393353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8de7518773eba9845ae3559eb1321480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
