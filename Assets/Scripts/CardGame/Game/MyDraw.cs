@@ -8,10 +8,10 @@ public class MyDraw : MonoBehaviour
     private List<string> Deck = new List<string>();
     private int TotalCardCount;
 
-    // Draw된 개수 추적용 딕셔너리
-    private Dictionary<string, int> drawCounts = new Dictionary<string, int>();
-
+    private Dictionary<string, int> drawCounts = new Dictionary<string, int>();// Draw된 개수 추적용 딕셔너리
+    private Dictionary<string, TextMeshProUGUI> cardTextDict = new Dictionary<string, TextMeshProUGUI>(); // 런타임에 연결되는 사전
     public List<CardPrefab> cardPrefabs;
+    public List<CardUI> cardUIs; // 인스펙터에서 설정할 UI 리스트
     // 기호와 UI 텍스트를 연결하기 위한 구조체
     [System.Serializable]
     public class CardUI
@@ -28,15 +28,18 @@ public class MyDraw : MonoBehaviour
     public Transform cardSpawnParent;        // 생성 위치 부모
     public Vector3 spawnOffset = Vector3.zero; // 위치 오프셋
 
+    private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
+    private const float debounceTime = 0.2f; // 0.2초 내의 중복 클릭 무시
 
-    // 인스펙터에서 설정할 UI 리스트
-    public List<CardUI> cardUIs;
-
-    // 런타임에 연결되는 사전
-    private Dictionary<string, TextMeshProUGUI> cardTextDict = new Dictionary<string, TextMeshProUGUI>();
+    public static MyDraw Instance { get; private set; } // 싱글톤
 
     void Start()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
         // 인스펙터에서 설정한 symbol → Text 연결
         foreach (var item in cardUIs)
         {
@@ -140,7 +143,14 @@ public class MyDraw : MonoBehaviour
 
     public void Pick(string symbol)
     {
-        // drawCounts에서 수량 확인
+        if (Time.time - lastDrawButtonClickTime < debounceTime) //무슨 버그인지 모르겠지만 얘만 두번씩 실행되서 임의로 막음
+        {
+            //Debug.Log("DrawButton: 디바운스 처리됨 (중복 클릭 무시)"); 
+            return;
+        }
+
+        lastDrawButtonClickTime = Time.time; // 현재 시간으로 마지막 클릭 시간 업데이트
+
         if (drawCounts.ContainsKey(symbol) && drawCounts[symbol] > 0)
         {
             drawCounts[symbol]--;      // 수량 감소
@@ -160,7 +170,7 @@ public class MyDraw : MonoBehaviour
             if (prefabToSpawn != null)
             {
                 Vector3 spawnPos = cardSpawnParent.position + spawnOffset;
-                Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
+                Instantiate(prefabToSpawn, spawnPos, prefabToSpawn.transform.rotation);
                 Debug.Log($"{symbol} 카드 복제됨.");
             }
             else

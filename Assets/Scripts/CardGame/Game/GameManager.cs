@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     int maxTurn=6; //최대 턴 (엔딩까지 몇턴인가)
     [HideInInspector]
     public int Hp; // 게임에서 사용되는 플레이어 체력
-    int PHp = 3; // 플레이어의 최대체력
+    int PHp = 100; // 플레이어의 최대체력
     public GameObject SelectUI; // 공격 or 드로우 선택 UI
     public GameObject AttackUI; // 공격 선택 후, 실제로 공격을 하기위한 UI
     public GameObject DefeatUI; // 패배하고나서 이후의 UI
@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     bool Attacking = false; // 실제로 몬스터를 카드로 공격할 때
     bool Draw = false; // 드로우 버튼을 눌렀을 때
 
-    public MyDraw mydraw; //드로우
     public MoleculeSpawner Spawner; //몬스터 스폰
 
     private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
@@ -146,8 +145,11 @@ public class GameManager : MonoBehaviour
         lastDrawButtonClickTime = Time.time; // 현재 시간으로 마지막 클릭 시간 업데이트
 
         Debug.Log("드로우를 합니다."); // 드로우 로직이 들어가야함
-        mydraw.Draw();
-        mydraw.PrintRemainingDeck();
+        for(int i = 0; i < 5; i++)
+        {
+            MyDraw.Instance.Draw();
+        }
+
         Draw = true;
     }
 
