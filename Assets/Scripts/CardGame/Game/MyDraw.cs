@@ -160,7 +160,7 @@ public class MyDraw : MonoBehaviour
             if (prefabToSpawn != null)
             {
                 Vector3 spawnPos = cardSpawnParent.position + spawnOffset;
-                Instantiate(prefabToSpawn, spawnPos, Quaternion.identity, cardSpawnParent);
+                Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
                 Debug.Log($"{symbol} 카드 복제됨.");
             }
             else
