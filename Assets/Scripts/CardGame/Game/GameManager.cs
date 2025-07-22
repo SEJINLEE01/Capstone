@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject SelectUI; // 공격 or 드로우 선택 UI
     public GameObject AttackUI; // 공격 선택 후, 실제로 공격을 하기위한 UI
     public GameObject DefeatUI; // 패배하고나서 이후의 UI
+    public GameObject Canvas; // 카드 뽑을 UI
     private GameObject selectedObject; //선택될 몬스터
     bool Attack = false; //공격버튼을 눌렀을 때
     bool Attacking = false; // 실제로 몬스터를 카드로 공격할 때
@@ -190,4 +191,9 @@ public class GameManager : MonoBehaviour
         SettingCard.Remove(card);
     }
 
+    public void ShowCardUI() // 카드뽑는 UI 보이기
+    {
+        AttackUI.SetActive(false);
+        Canvas.SetActive(true);
+    }
 }

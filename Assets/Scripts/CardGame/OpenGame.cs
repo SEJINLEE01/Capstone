@@ -40,4 +40,9 @@ public class OpenGame : MonoBehaviour
         if(SpawnNum==5)
             trigger=true;
     }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Q)) trigger = true;
+    }
 }
