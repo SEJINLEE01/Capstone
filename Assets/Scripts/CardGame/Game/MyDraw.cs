@@ -113,6 +113,8 @@ public class MyDraw : MonoBehaviour
             UpdateCardText(drawnCard);
         }
 
+        SpawnAnimateCard.AnimateCard.Request(drawnCard); // 애니메이션 카드 소환하는 로직
+
         Debug.Log($"드로우된 카드: {drawnCard} 남은 카드: {Deck.Count}장.");
         return drawnCard;
     }
@@ -170,7 +172,7 @@ public class MyDraw : MonoBehaviour
             if (prefabToSpawn != null)
             {
                 Vector3 spawnPos = cardSpawnParent.position + spawnOffset;
-                Instantiate(prefabToSpawn, spawnPos, prefabToSpawn.transform.rotation);
+                Instantiate(prefabToSpawn, spawnPos, cardSpawnParent.transform.rotation);
                 Debug.Log($"{symbol} 카드 복제됨.");
             }
             else

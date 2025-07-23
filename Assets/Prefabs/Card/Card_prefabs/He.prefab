@@ -887,7 +887,6 @@ GameObject:
   - component: {fileID: 2680885677635428776}
   - component: {fileID: 2335945558992637914}
   - component: {fileID: 864905695578294828}
-  - component: {fileID: 4226060386672797078}
   m_Layer: 0
   m_Name: cardb
   m_TagString: Untagged
@@ -960,27 +959,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4226060386672797078
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7968445725629628762}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8712364144270804316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1076,7 @@ GameObject:
   - component: {fileID: 5874787479315080661}
   - component: {fileID: 4591670483928581306}
   - component: {fileID: 968392063828766102}
+  - component: {fileID: 7248158350565594514}
   m_Layer: 0
   m_Name: He
   m_TagString: Untagged
@@ -1164,3 +1143,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b52c49ab182598489e4fbe8761a4467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7248158350565594514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974559817332425309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.370022, y: 6.549999, z: 0.19999743}
+  m_Center: {x: 0, y: 0, z: 0}
