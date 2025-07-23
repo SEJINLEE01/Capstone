@@ -9585,37 +9585,6 @@ Transform:
   - {fileID: 2090564324}
   m_Father: {fileID: 978308891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &555008953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 555008954}
-  m_Layer: 0
-  m_Name: Manager Pos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &555008954
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555008953}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.24, z: 3.252}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 855892152}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557425531
 GameObject:
   m_ObjectHideFlags: 0
@@ -16898,12 +16867,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 976277930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &855892152 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2205462337584832585, guid: 695e6b8815c9a104ab156fc87e9d5348,
-    type: 3}
-  m_PrefabInstance: {fileID: 181218301525120111}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &857539139
 GameObject:
   m_ObjectHideFlags: 0
@@ -39872,18 +39835,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 7479281052367552279, guid: 695e6b8815c9a104ab156fc87e9d5348,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.973
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2205462337584832585, guid: 695e6b8815c9a104ab156fc87e9d5348,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 555008954}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695e6b8815c9a104ab156fc87e9d5348, type: 3}
 --- !u!1001 &291642194468196866

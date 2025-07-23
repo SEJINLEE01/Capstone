@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GameLoop(){
         yield return new WaitForSeconds(1.0f); // 일단 스포너 기다리기 위해서 임시로 넣어놓음 튜토리얼추가되면 제거예정 
+
         for (int i=0;i<maxTurn;i++){ 
             SelectUI.SetActive(true);
             AttackUI.SetActive(false);

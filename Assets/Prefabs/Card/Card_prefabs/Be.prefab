@@ -751,7 +751,6 @@ GameObject:
   - component: {fileID: 1730212615699598247}
   - component: {fileID: 9136133102627237746}
   - component: {fileID: 5034037352028255459}
-  - component: {fileID: 8597442418044617460}
   m_Layer: 0
   m_Name: cardb
   m_TagString: Untagged
@@ -824,27 +823,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8597442418044617460
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4415608942256869019}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4490542587119555885
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +834,7 @@ GameObject:
   - component: {fileID: 9054266450876529003}
   - component: {fileID: 2359256736361760135}
   - component: {fileID: 4328953324795219668}
+  - component: {fileID: -5421655327886371702}
   m_Layer: 0
   m_Name: Be
   m_TagString: Untagged
@@ -922,6 +901,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf31b8e395c59d745bc586f2b22ae03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-5421655327886371702
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490542587119555885}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.370022, y: 6.549999, z: 0.19999743}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6837851453196000440
 GameObject:
   m_ObjectHideFlags: 0
