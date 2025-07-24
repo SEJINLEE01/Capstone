@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public abstract class GameMonster : MonoBehaviour
 {
     protected int molecular_mass; // 분자량(체력)
@@ -12,6 +12,8 @@ public abstract class GameMonster : MonoBehaviour
     protected int turn; // 지난 턴수
 
     public Image HPimg;
+    public TextMeshProUGUI waitturn;
+    public TextMeshProUGUI passturn;
 
     // + 공통되는 함수
     public void Attack(){
@@ -28,12 +30,14 @@ public abstract class GameMonster : MonoBehaviour
 
     public void AddTurn(){
         turn++;
+        passturn.text = "현재 턴: "+ turn.ToString();
     }
     public void ResetAttackTurn(){
         turn = 0;
     }
 
     public bool CheckAttackTurn(){
+        waitturn.text = attack_turn.ToString()+" 턴 뒤 공격";
         return (attack_turn == turn);
     }
 
