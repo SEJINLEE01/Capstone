@@ -34,6 +34,23 @@ public class MoleculeSpawner : MonoBehaviour
             SpawnLarge();
         }
     }
+    public void InitialSpawnMonster()
+    {
+        Monsters.Clear(); // 몬스터가 들어있던 큐 초기화
+
+        for (int i = 0; i < S; i++)
+        {
+            SpawnSmall();
+        }
+        for (int i = 0; i < M; i++)
+        {
+            SpawnMiddle();
+        }
+        for (int i = 0; i < L; i++)
+        {
+            SpawnLarge();
+        }
+    }
 
     private void SpawnSmall() // 작은분자 몬스터를 소환하는 로직
     {
