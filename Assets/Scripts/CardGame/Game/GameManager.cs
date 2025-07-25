@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     int maxTurn=6; //최대 턴 (엔딩까지 몇턴인가)
     [HideInInspector]
     public int Hp; // 게임에서 사용되는 플레이어 체력
-    int PHp = 100; // 플레이어의 최대체력
+    int PHp = 5; // 플레이어의 최대체력
     public GameObject SelectUI; // 공격 or 드로우 선택 UI
     public GameObject AttackUI; // 공격 선택 후, 실제로 공격을 하기위한 UI
     public GameObject DefeatUI; // 패배하고나서 이후의 UI
@@ -95,6 +95,46 @@ public class GameManager : MonoBehaviour
         }
          Debug.Log("게임이 종료되었습니다.");
     }
+    
+    void Initialize() // 게임을 완전히 다시리셋
+    {
+        ClearScene();
+
+        Spawner.InitialSpawnMonster(); // 몬스터스포너 초기화(다시 새로운 몬스터를 추가하도록)
+        SpawnAnimateCard.AnimateCard.ReInitialize(); // 덱초기화
+        MyDraw.Instance.InitializeDeck(); // 드로우매니저 초기화
+
+        selectedObject = null; // 처음에 아무 몬스터도 선택되지않음을 표시
+        Hp = PHp; // 체력 초기화
+        turn = 1; // 턴 초기화
+
+        SelectUI.SetActive(false);
+        AttackUI.SetActive(false);
+        DefeatUI.SetActive(false);
+        Attack = false; // 매턴이 지나면 bool변수 모두 초기화
+        Attacking = false;
+        Draw = false;
+    }
+
+    void ClearScene()
+    {
+        if (SettingCard.Count > 0)
+        {
+            for (int i = 0; i < SettingCard.Count; i++)
+                Destroy(SettingCard[i]); // 씬에 남아있는 오브젝트 파괴
+        }
+        SettingCard.Clear(); // 코드상에서 남아있는 카드 없애기
+
+        if (Monsters.Count > 0)
+        {
+            List<GameObject> SceneObject = new List<GameObject>(Monsters.Keys); // 딕셔너리에 있는 오브젝트를 안전하게 제거
+            for (int i = 0; i < SceneObject.Count; i++)
+                Destroy(SceneObject[i]);
+        }
+        Monsters.Clear(); // 코드상에 있는 몬스터 없애기
+
+        MyDraw.Instance.DestroySceneCard();
+    }
     void DefeatProcess(){ // 몬스터한테 죽었을 경우 실행될 프로세스
         Debug.Log("사망하였습니다"); // 여기서 돌아갈지 다시시작할건지를 나타내는 UI를 띄우는 로직
         DefeatUI.SetActive(true);
@@ -156,15 +196,15 @@ public class GameManager : MonoBehaviour
     }
 
     public void ReStartButton(){ //다시시작
-        // 초기화 함수를 만들고 추가해야함
-        turn = 1; // 턴 초기화
-        Hp = PHp; // Hp초기화
+
+        Initialize();
         StartCoroutine(GameLoop());
         Debug.Log("게임을 다시 시작합니다");
     }
     
     public void EndButton(){ // 종료버튼
-        Debug.Log("종료"); 
+        Debug.Log("종료");
+        ClearScene();
         PlayerPos.transform.position = pos.transform.position;
         Destroy(gameObject);
         //추가되어야할것 게임과 관련된 모든 오브젝트를 전부 없앤다.

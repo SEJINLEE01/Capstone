@@ -31,6 +31,7 @@ public class MyDraw : MonoBehaviour
     private float lastDrawButtonClickTime = 0f; // 마지막 클릭 시간 저장
     private const float debounceTime = 0.2f; // 0.2초 내의 중복 클릭 무시
 
+    private List<GameObject> SceneCards = new List<GameObject>(); // 씬에 나와있는 카드를 없애기 위한 코드
     public static MyDraw Instance { get; private set; } // 싱글톤
 
     void Start()
@@ -77,6 +78,8 @@ public class MyDraw : MonoBehaviour
         AddCardsToDeck("Ca", 2);
         TotalCardCount = Deck.Count;
 
+        DestroySceneCard();
+
         // 모든 원소에 대해 draw 카운트 0으로 설정 & UI 초기화
         foreach (string symbol in cardTextDict.Keys)
         {
@@ -91,6 +94,16 @@ public class MyDraw : MonoBehaviour
         {
             Deck.Add(symbol);
         }
+    }
+
+    public void DestroySceneCard()
+    {
+        if (SceneCards.Count > 0) // 씬에 카드가 나와있다면
+        {
+            for (int i = 0; i < SceneCards.Count; i++)
+                Destroy(SceneCards[i]); // 씬에 카드를 파괴
+        }
+        SceneCards.Clear(); // 코드상에서 없애기
     }
 
     public string Draw()
@@ -172,7 +185,7 @@ public class MyDraw : MonoBehaviour
             if (prefabToSpawn != null)
             {
                 Vector3 spawnPos = cardSpawnParent.position + spawnOffset;
-                Instantiate(prefabToSpawn, spawnPos, cardSpawnParent.transform.rotation);
+                SceneCards.Add(Instantiate(prefabToSpawn, spawnPos, cardSpawnParent.transform.rotation));
                 Debug.Log($"{symbol} 카드 복제됨.");
             }
             else

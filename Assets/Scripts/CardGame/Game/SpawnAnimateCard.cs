@@ -31,6 +31,14 @@ public class SpawnAnimateCard : MonoBehaviour
             Destroy(gameObject);
     }
 
+    public void ReInitialize()
+    {
+        if (!DeckPivot.activeSelf)
+            DeckPivot.SetActive(true);
+        CardCount = 60;
+        DeckPivot.transform.localScale = new Vector3(1f, 1f, (float)CardCount / 60);
+    }
+
     public void Request(string symbol)
     {
         functionQueue.Enqueue(() => SpawnCard(symbol)); // SpawnCard를 큐에 추가
@@ -65,8 +73,8 @@ public class SpawnAnimateCard : MonoBehaviour
             Debug.LogError($"오류: '{symbol}' 심볼에 해당하는 카드 프리팹을 리스트에서 찾을 수 없습니다.");
         }
 
-        if (CardCount == 0) Destroy(DeckPivot);
-        else DeckPivot.transform.localScale = new Vector3(1f,1f, (float)CardCount / 60);
+        if (CardCount == 0) DeckPivot.SetActive(false);
+        else DeckPivot.transform.localScale = new Vector3(1f, 1f, (float)CardCount / 60);
     }
 
     private IEnumerator ProcessFunctionQueue() // 1.8초 대기하는 코루틴 로직
