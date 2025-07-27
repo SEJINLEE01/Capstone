@@ -8,6 +8,11 @@ public abstract class GameCard : MonoBehaviour
     protected string symbol; // 원자이름
     protected bool isNobleGas; // 비활성기체인가?
 
+    public string GetSymbol()
+    {
+        return symbol;
+    }
+
     public int CalculateAttackPower() //단일로 냈을경우
     {
         if (atomic_mass == 1) return 1; //수소는 그냥 1

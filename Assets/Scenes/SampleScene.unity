@@ -1216,6 +1216,7 @@ MonoBehaviour:
   Monitor:
   - {fileID: 1268472854}
   - {fileID: 1966970049}
+  - {fileID: 871484960}
 --- !u!4 &83100650
 Transform:
   m_ObjectHideFlags: 0
@@ -17137,7 +17138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &871484961
 MeshCollider:
   m_ObjectHideFlags: 0
