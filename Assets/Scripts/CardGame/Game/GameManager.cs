@@ -79,8 +79,10 @@ public class GameManager : MonoBehaviour
                 monsterScript.AddTurn();
                 if(monsterScript.CheckAttackTurn()){
                     monsterScript.Attack();
-                    Debug.Log("남은체력 : " + Hp); 
-                    if(Hp<=0){
+                    
+                    HP_Update.Instance.UpdateHeartUI(Hp); // Hp UI업데이트
+
+                    if (Hp<=0){
                         DefeatProcess();
                         yield break;
                     }
