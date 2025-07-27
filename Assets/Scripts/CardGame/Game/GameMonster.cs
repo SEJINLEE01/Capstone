@@ -37,7 +37,10 @@ public abstract class GameMonster : MonoBehaviour
     }
 
     public bool CheckAttackTurn(){
-        waitturn.text = attack_turn.ToString()+" 턴 뒤 공격";
+        
+            waitturn.text = attack_turn.ToString() + " 턴 뒤 공격";
+        
+        
         return (attack_turn == turn);
     }
 
