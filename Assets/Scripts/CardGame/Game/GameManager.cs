@@ -163,15 +163,32 @@ public class GameManager : MonoBehaviour
 
         int attack = 0; // 세팅된 카드들의 공격력 합
 
-        foreach(GameObject Card in SettingCard) // 순회가 도는동안 파괴가 되면 오류가나서 파괴와 계산을 분리
+        if (CombineManage.combineManage.CheckPossibleCombinations(SettingCard))
         {
-            attack += Card.GetComponent<GameCard>().CalculateAttackPower();
+            Debug.Log($"  - <color=yellow>카드가 조합되었습니다.</color>)");
+            foreach (GameObject Card in SettingCard) // 순회가 도는동안 파괴가 되면 오류가나서 파괴와 계산을 분리
+            {
+                attack += Card.GetComponent<GameCard>().CalculateCombinedAttackPower();
+            }
+            foreach (GameObject DestroyCard in SettingCard.ToList())
+            {
+                Destroy(DestroyCard);
+            }
+            SettingCard.Clear();
         }
-        foreach(GameObject DestroyCard in SettingCard.ToList())
+        else
         {
-            Destroy(DestroyCard);
+            Debug.Log($"  - <color=yellow>카드가 조합되지않고 그냥 공격합니다.</color>)");
+            foreach (GameObject Card in SettingCard) // 순회가 도는동안 파괴가 되면 오류가나서 파괴와 계산을 분리
+            {
+                attack += Card.GetComponent<GameCard>().CalculateAttackPower();
+            }
+            foreach (GameObject DestroyCard in SettingCard.ToList())
+            {
+                Destroy(DestroyCard);
+            }
+            SettingCard.Clear();
         }
-        SettingCard.Clear();
 
         Gms.Attacked(attack);
         Gms.isDie();

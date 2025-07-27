@@ -833,6 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3289800047928875806}
   - component: {fileID: 5140469101910931407}
+  - component: {fileID: 7195224070732640349}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -876,6 +877,19 @@ MonoBehaviour:
   DefeatUI: {fileID: 8715280609867769463}
   Canvas: {fileID: 4087947124554733269}
   Spawner: {fileID: 7966645760521092999}
+--- !u!114 &7195224070732640349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142239237561018253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8c03d18a06dd74bbe5883f568b59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCompounds: []
 --- !u!1 &8508269281850240982
 GameObject:
   m_ObjectHideFlags: 0
