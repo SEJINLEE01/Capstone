@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     int maxTurn=6; //최대 턴 (엔딩까지 몇턴인가)
     [HideInInspector]
     public int Hp; // 게임에서 사용되는 플레이어 체력
-    int PHp = 5; // 플레이어의 최대체력
+    [HideInInspector]
+    public int PHp = 5; // 플레이어의 최대체력
     public GameObject SelectUI; // 공격 or 드로우 선택 UI
     public GameObject AttackUI; // 공격 선택 후, 실제로 공격을 하기위한 UI
     public GameObject DefeatUI; // 패배하고나서 이후의 UI

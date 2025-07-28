@@ -181,6 +181,8 @@ GameObject:
   - component: {fileID: 7236783783884831678}
   - component: {fileID: 3062728395287315949}
   - component: {fileID: 659166931542085765}
+  - component: {fileID: -4820247315776993213}
+  - component: {fileID: -8469776041889242890}
   m_Layer: 3
   m_Name: CO2_Monster
   m_TagString: CO2
@@ -344,6 +346,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapper: {fileID: 3062728395287315949}
+  selectedImg: {fileID: 0}
+--- !u!114 &-4820247315776993213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807848400895695203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4378c1d35a4d349b03385c1c82d524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  move: 0.05
+--- !u!114 &-8469776041889242890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807848400895695203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9871e38011aefc142a611caa4e50aac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPimg: {fileID: 0}
+  waitturn: {fileID: 0}
+  passturn: {fileID: 0}
 --- !u!1 &5103639018020067312
 GameObject:
   m_ObjectHideFlags: 0

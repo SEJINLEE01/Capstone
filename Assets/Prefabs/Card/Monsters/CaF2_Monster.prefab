@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6622174743857898089}
   - component: {fileID: 1708652468052184537}
   - component: {fileID: 312507776264212259}
+  - component: {fileID: -6207452375174053000}
+  - component: {fileID: 5529612370022862249}
   m_Layer: 3
   m_Name: CaF2_Monster
   m_TagString: CaF2
@@ -103,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapper: {fileID: 6622174743857898089}
+  selectedImg: {fileID: 0}
 --- !u!114 &6622174743857898089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +177,35 @@ MonoBehaviour:
   _selectSurface: {fileID: 0}
   _movementProvider: {fileID: 0}
   _tiebreakerScore: 0
+--- !u!114 &-6207452375174053000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890423607564320649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f02435903b14b428b18d47062b2c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPimg: {fileID: 0}
+  waitturn: {fileID: 0}
+  passturn: {fileID: 0}
+--- !u!114 &5529612370022862249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890423607564320649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4378c1d35a4d349b03385c1c82d524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  move: 0.05
 --- !u!1001 &131879702462939953
 PrefabInstance:
   m_ObjectHideFlags: 0

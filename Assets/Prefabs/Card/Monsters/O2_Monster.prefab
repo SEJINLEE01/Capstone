@@ -215,6 +215,8 @@ GameObject:
   - component: {fileID: 6662829124761960977}
   - component: {fileID: 5371439519528390704}
   - component: {fileID: 5301259104184932600}
+  - component: {fileID: 98269328825528784}
+  - component: {fileID: 2732728230167619347}
   m_Layer: 3
   m_Name: O2_Monster
   m_TagString: O2
@@ -304,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapper: {fileID: 6662829124761960977}
+  selectedImg: {fileID: 0}
 --- !u!114 &6662829124761960977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +378,35 @@ MonoBehaviour:
   _selectSurface: {fileID: 0}
   _movementProvider: {fileID: 0}
   _tiebreakerScore: 0
+--- !u!114 &98269328825528784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859950916948449110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4378c1d35a4d349b03385c1c82d524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  move: 0.05
+--- !u!114 &2732728230167619347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859950916948449110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32f2761616fe31429b8267a90b32384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPimg: {fileID: 0}
+  waitturn: {fileID: 0}
+  passturn: {fileID: 0}
 --- !u!1 &5860486953073304859
 GameObject:
   m_ObjectHideFlags: 0
