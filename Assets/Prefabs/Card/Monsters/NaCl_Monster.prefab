@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1662287875294617024}
   - component: {fileID: 6082730007770466435}
   - component: {fileID: 8889875877050010740}
+  - component: {fileID: -1276104406262267657}
+  - component: {fileID: 2012023786583141118}
   m_Layer: 3
   m_Name: NaCl_Monster
   m_TagString: NaCl
@@ -102,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapper: {fileID: 1662287875294617024}
+  selectedImg: {fileID: 0}
 --- !u!114 &1662287875294617024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +176,35 @@ MonoBehaviour:
   _selectSurface: {fileID: 0}
   _movementProvider: {fileID: 0}
   _tiebreakerScore: 0
+--- !u!114 &-1276104406262267657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901139550369791990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4378c1d35a4d349b03385c1c82d524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  move: 0.05
+--- !u!114 &2012023786583141118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901139550369791990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4775178d942004baf3023f78edfb2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPimg: {fileID: 0}
+  waitturn: {fileID: 0}
+  passturn: {fileID: 0}
 --- !u!1001 &3840813329441621213
 PrefabInstance:
   m_ObjectHideFlags: 0

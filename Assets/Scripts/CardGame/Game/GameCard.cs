@@ -19,7 +19,7 @@ public abstract class GameCard : MonoBehaviour
         return isNobleGas ? atomic_mass : Mathf.RoundToInt(atomic_mass / 2f); // 비활성기체면 그대로 아니면 절반
     }
 
-    public int CalculateCombinedAttackPower() // 조합됐을경우
+    public virtual int CalculateCombinedAttackPower() // 조합됐을경우
     {
         return atomic_mass; // 조합된경우에는 모든 카드가 그대로의 원자량으로 공격
     }

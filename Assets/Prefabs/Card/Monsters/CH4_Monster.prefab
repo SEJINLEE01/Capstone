@@ -181,6 +181,8 @@ GameObject:
   - component: {fileID: 135396719451962476}
   - component: {fileID: 4929474283827722917}
   - component: {fileID: 7612611613048217641}
+  - component: {fileID: -6044006623850264411}
+  - component: {fileID: -3854788842937216845}
   m_Layer: 3
   m_Name: CH4_Monster
   m_TagString: CH4
@@ -323,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapper: {fileID: 135396719451962476}
+  selectedImg: {fileID: 0}
 --- !u!114 &7612611613048217641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +347,35 @@ MonoBehaviour:
   _selectSurface: {fileID: 0}
   _movementProvider: {fileID: 0}
   _tiebreakerScore: 0
+--- !u!114 &-6044006623850264411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606344044801367113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd20532631b6a147a224804fb7c9ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPimg: {fileID: 0}
+  waitturn: {fileID: 0}
+  passturn: {fileID: 0}
+--- !u!114 &-3854788842937216845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606344044801367113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4378c1d35a4d349b03385c1c82d524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  move: 0.05
 --- !u!1 &5493623814159602664
 GameObject:
   m_ObjectHideFlags: 0
