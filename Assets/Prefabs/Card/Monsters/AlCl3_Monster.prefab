@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapper: {fileID: 5691943466368980755}
-  selectedImg: {fileID: 0}
+  selectedImg: {fileID: 2994828807629004277}
 --- !u!114 &5691943466368980755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,9 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPimg: {fileID: 8333326876384786901}
-  waitturn: {fileID: 0}
-  passturn: {fileID: 0}
---- !u!114 &7109885407979285224
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,6 +258,11 @@ MonoBehaviour:
   hitFlashColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.2
   fadeOutSpeed: 0.05
+
+  waitturn: {fileID: 5090261490665789342}
+  passturn: {fileID: 3448872383297401264}
+  cohesionTxt: {fileID: 2485642162958741238}
+
 --- !u!1 &1889313489349773267
 GameObject:
   m_ObjectHideFlags: 0
