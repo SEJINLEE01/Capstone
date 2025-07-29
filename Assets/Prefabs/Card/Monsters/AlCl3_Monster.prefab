@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 6329041922501033022}
   - component: {fileID: 5507134206116790463}
   - component: {fileID: 5844097261041617039}
+  - component: {fileID: 7109885407979285224}
   m_Layer: 3
   m_Name: AlCl3_Monster
   m_TagString: AlCl3
@@ -241,6 +242,24 @@ MonoBehaviour:
   HPimg: {fileID: 8333326876384786901}
   waitturn: {fileID: 0}
   passturn: {fileID: 0}
+--- !u!114 &7109885407979285224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666776791827214066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0579b3164ff65b94c9cba12323956df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atomRenderers: []
+  normalColor: {r: 0, g: 1, b: 1, a: 1}
+  attackFlashColor: {r: 1, g: 0, b: 0, a: 1}
+  hitFlashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.2
+  fadeOutSpeed: 0.05
 --- !u!1 &1889313489349773267
 GameObject:
   m_ObjectHideFlags: 0
