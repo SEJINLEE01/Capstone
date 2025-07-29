@@ -206,11 +206,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SmallMolcule:
+  - {fileID: 3859950916948449110, guid: 750ced157b8a8a047a270779bb2ce093, type: 3}
+  - {fileID: 4054859554587652833, guid: 16b1f78713b2302499ed58f2ea357d60, type: 3}
   - {fileID: 1870062330127200580, guid: 807036fcaf9caf44fb127e3fdcd37315, type: 3}
+  - {fileID: 329691490058413576, guid: 8e4c5465d9962e44f997bd48d6a3d6b3, type: 3}
+  - {fileID: 3606344044801367113, guid: 369517bd3acf257469460d727cac5f66, type: 3}
+  - {fileID: 548519073945770054, guid: 3edf8240433d1344f892dda078559fa7, type: 3}
   MiddleMolcule:
-  - {fileID: 1870062330127200580, guid: 807036fcaf9caf44fb127e3fdcd37315, type: 3}
+  - {fileID: 6623481261153972122, guid: 2ac2cf02609a4e64bb078f3b96891206, type: 3}
+  - {fileID: 5189247621546692102, guid: f830f8c381f79a44a8caae751007d56a, type: 3}
+  - {fileID: 5190966534203450143, guid: b54724ca1ca0d554a802cc8e016f9093, type: 3}
+  - {fileID: 4771544474768381393, guid: 8ff2834ab8a17254aa1c5f05129a4b58, type: 3}
+  - {fileID: 1930627397607183114, guid: 4b8f0e095ac710d4bbadf83547397307, type: 3}
   LargeMolcule:
-  - {fileID: 1870062330127200580, guid: 807036fcaf9caf44fb127e3fdcd37315, type: 3}
+  - {fileID: 666776791827214066, guid: 573ca9a31bd2e7b4cab9f8c80e5a02ad, type: 3}
+  - {fileID: 2890423607564320649, guid: a935c5490bb845b46bc901246b5e90e2, type: 3}
+  - {fileID: 2896994430655225735, guid: 621a2e4c4b8cbc643a76aa9d5258657b, type: 3}
+  - {fileID: 5901139550369791990, guid: b8aa2e806bb45fc408884ada93417705, type: 3}
+  - {fileID: 2807848400895695203, guid: 0a891c7d71134be419660455ecd587ed, type: 3}
+  - {fileID: 2957135809742285841, guid: d1d8164855370de4b8bf906a361776d4, type: 3}
   spawnPoints:
   - {fileID: 7770297035326258694}
   - {fileID: 8545826694281471106}
@@ -872,6 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 0
+  PHp: 5
   SelectUI: {fileID: 3340495320915765287}
   AttackUI: {fileID: 5772519309130243340}
   DefeatUI: {fileID: 8715280609867769463}
@@ -889,7 +904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8c03d18a06dd74bbe5883f568b59a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allCompounds: []
 --- !u!1 &8508269281850240982
 GameObject:
   m_ObjectHideFlags: 0

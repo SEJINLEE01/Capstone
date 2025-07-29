@@ -6,7 +6,7 @@ public class Cl : GameCard
 {
     void Start()
     {
-        atomic_mass = 35;
+        atomic_mass = 36;
         symbol = "Cl";
         isNobleGas = false;
     }
