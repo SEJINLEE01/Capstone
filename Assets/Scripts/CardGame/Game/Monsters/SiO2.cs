@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using TMPro;
 using UnityEngine;
 
 public class SiO2 : GameMonster
 {
+    public TextMeshProUGUI cohesionTxt;
     void Start()
     {
         MaxHp = 60;
@@ -12,5 +14,9 @@ public class SiO2 : GameMonster
         cohesion = 2; // 결합력(공격력)
         attack_turn = 3; // 공격까지 몇턴 기다리는가 
         turn = 0;
+    }
+    private void Update()
+    {
+        cohesionTxt.text = "공격력: " + cohesion;
     }
 }
