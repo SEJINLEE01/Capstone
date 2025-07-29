@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapper: {fileID: 5691943466368980755}
-  selectedImg: {fileID: 0}
+  selectedImg: {fileID: 2994828807629004277}
 --- !u!114 &5691943466368980755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,8 +239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPimg: {fileID: 8333326876384786901}
-  waitturn: {fileID: 0}
-  passturn: {fileID: 0}
+  waitturn: {fileID: 5090261490665789342}
+  passturn: {fileID: 3448872383297401264}
+  cohesionTxt: {fileID: 2485642162958741238}
 --- !u!1 &1889313489349773267
 GameObject:
   m_ObjectHideFlags: 0
