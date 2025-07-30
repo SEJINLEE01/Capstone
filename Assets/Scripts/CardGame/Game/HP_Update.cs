@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HP_Update : MonoBehaviour
 {
     public GameObject Heart_Canvas; // Äµ¹ö½º
+    public GameObject Player;
     Image[] Heart; // ½ÇÁ¦ HP ÀÌ¹ÌÁö
 
     public static HP_Update Instance { get; private set; } // ½Ì±ÛÅæ
@@ -22,6 +23,12 @@ public class HP_Update : MonoBehaviour
         {
             Heart[i]= Heart_Canvas.transform.GetChild(i).gameObject.GetComponent<Image>();
         }
+    }
+
+    public void Update()
+    {
+        Heart_Canvas.transform.position = Player.transform.position + (Player.transform.forward * 1.5f) + (Player.transform.right*0.6f) + (Player.transform.up);
+        Heart_Canvas.transform.rotation = Player.transform.rotation;
     }
 
     public void UpdateHeartUI(int currentHealth)
