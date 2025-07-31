@@ -232,7 +232,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void SetSelectedObject(GameObject obj) //선택된 오브젝트
-    { 
+    {
+        if (selectedObject != null && selectedObject != obj)
+        {
+            MonsterSelect prevSelect = selectedObject.GetComponent<MonsterSelect>();
+            if (prevSelect != null)
+                prevSelect.selectedImg.SetActive(false); // 이전 선택된 몬스터의 이미지 끄기
+        }
         selectedObject = obj; // 해당 몬스터가 선택됨
         Debug.Log(selectedObject.gameObject.name);
     }
