@@ -10,10 +10,10 @@ public abstract class GameMonster : MonoBehaviour
     protected int cohesion; // 결합력(공격력)
     protected int attack_turn; // 공격까지 몇턴 기다리는가
     protected int turn; // 지난 턴수
-
+    protected int turnUI;
     public Image HPimg;
-    public TextMeshProUGUI waitturn;
-    public TextMeshProUGUI passturn;
+    public TextMeshProUGUI Hptxt;
+
 
     // + 공통되는 함수
     public void Attack(){
@@ -25,22 +25,19 @@ public abstract class GameMonster : MonoBehaviour
         molecular_mass -= molecular;
         Debug.Log("남은 체력은 :" + molecular_mass);
         HPimg.fillAmount = molecular_mass * 1.0f / MaxHp;
-
+        Hptxt.text = molecular_mass + "/" + MaxHp;
     }
 
     public void AddTurn(){
         turn++;
-        passturn.text = "현재 턴: "+ turn.ToString();
+        turnUI--;
     }
     public void ResetAttackTurn(){
         turn = 0;
+        turnUI = attack_turn;
     }
 
     public bool CheckAttackTurn(){
-        
-            waitturn.text = attack_turn.ToString() + " 턴 뒤 공격";
-        
-        
         return (attack_turn == turn);
     }
 
