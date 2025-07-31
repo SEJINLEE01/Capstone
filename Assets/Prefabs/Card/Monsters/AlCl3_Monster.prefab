@@ -32,6 +32,37 @@ Transform:
   - {fileID: 8731903120878095699}
   m_Father: {fileID: 7804168091413169708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &491052852941987747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2819162909837645215}
+  m_Layer: 3
+  m_Name: deathSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2819162909837645215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491052852941987747}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7804168091413169708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &666776791827214066
 GameObject:
   m_ObjectHideFlags: 0
@@ -49,7 +80,7 @@ GameObject:
   - component: {fileID: 6329041922501033022}
   - component: {fileID: 5507134206116790463}
   - component: {fileID: 5844097261041617039}
-  - component: {fileID: 7109885407979285224}
+  - component: {fileID: 6844285061504636774}
   m_Layer: 3
   m_Name: AlCl3_Monster
   m_TagString: AlCl3
@@ -78,6 +109,8 @@ Transform:
   - {fileID: 3065376590295920968}
   - {fileID: 918287345941345951}
   - {fileID: 2825823286384023673}
+  - {fileID: 382354504983550986}
+  - {fileID: 2819162909837645215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7475414286197473748
@@ -240,7 +273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPimg: {fileID: 8333326876384786901}
-
+  waitturn: {fileID: 0}
+  passturn: {fileID: 0}
+  cohesionTxt: {fileID: 0}
+--- !u!114 &6844285061504636774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,20 +285,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 666776791827214066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0579b3164ff65b94c9cba12323956df9, type: 3}
+  m_Script: {fileID: 11500000, guid: f53a81548de47d2479bab886b77fe5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atomRenderers: []
-  normalColor: {r: 0, g: 1, b: 1, a: 1}
-  attackFlashColor: {r: 1, g: 0, b: 0, a: 1}
-  hitFlashColor: {r: 1, g: 1, b: 1, a: 1}
-  flashDuration: 0.2
-  fadeOutSpeed: 0.05
-
-  waitturn: {fileID: 5090261490665789342}
-  passturn: {fileID: 3448872383297401264}
-  cohesionTxt: {fileID: 2485642162958741238}
-
+  hitEffectSpawnPoint: {fileID: 382354504983550986}
+  deathEffectSpawnPoint: {fileID: 2819162909837645215}
+  hitEffectPrefab: {fileID: 8593464584776411535, guid: b21d155ec7ea5a349a0e36106f913148,
+    type: 3}
+  deathEffectPrefab: {fileID: 5162910912013668194, guid: cf82839c411151342a7b2337bda9fb34,
+    type: 3}
+  damageOverlay: {fileID: 0}
+  flashInSpeed: 5
+  flashOutSpeed: 2
+  maxAlpha: 0.4
 --- !u!1 &1889313489349773267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1209,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7900047656618286347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 382354504983550986}
+  m_Layer: 3
+  m_Name: hitSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &382354504983550986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900047656618286347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7804168091413169708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8277236879764280447
 GameObject:
   m_ObjectHideFlags: 0
