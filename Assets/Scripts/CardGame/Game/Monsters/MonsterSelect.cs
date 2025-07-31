@@ -6,6 +6,7 @@ public class MonsterSelect : MonoBehaviour
 {
     public InteractableUnityEventWrapper wrapper; //몬스터마다 추가해줘야함
     public GameObject selectedImg;
+    
     void Start()
     {
         if (wrapper == null)
