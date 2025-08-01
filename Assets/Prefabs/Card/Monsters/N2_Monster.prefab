@@ -291,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HPimg: {fileID: 1375075877463160153}
   Hptxt: {fileID: 2360648178776949256}
+  effectController: {fileID: 0}
   turnTxt: {fileID: 4784756633161013939}
   cohesionTxt: {fileID: 6465340895551151986}
 --- !u!1 &4218530367369331564
@@ -916,7 +917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50/50
+  m_text: 28/28
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1e51ffaa58f8da4fa5bbbfe52362e6f, type: 2}
   m_sharedMaterial: {fileID: -5241709661901793275, guid: c1e51ffaa58f8da4fa5bbbfe52362e6f,

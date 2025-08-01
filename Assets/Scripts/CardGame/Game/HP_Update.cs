@@ -17,6 +17,7 @@ public class HP_Update : MonoBehaviour
         else
             Destroy(gameObject);
 
+        Player = GameObject.Find("CenterEyeAnchor");
         Heart = new Image[Heart_Canvas.transform.childCount];
 
         for (int i = 0; i < Heart_Canvas.transform.childCount; i++)

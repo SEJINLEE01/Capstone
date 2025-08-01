@@ -22,8 +22,13 @@ public class EffectController : MonoBehaviour
     // 몬스터 피격 (effect 이름 : vfx_impact_01)
     public void TriggerHitEffect()
     {
+        GameObject effect;
         if (hitEffectPrefab && hitEffectSpawnPoint)
-            Instantiate(hitEffectPrefab, hitEffectSpawnPoint.position, hitEffectSpawnPoint.rotation);
+        {
+            effect = Instantiate(hitEffectPrefab, hitEffectSpawnPoint.position, hitEffectSpawnPoint.rotation);
+            Destroy(effect, 1f);
+        }
+       
     }
 
     // 몬스터가 공격 → 플레이어 피격 → 화면 붉게
@@ -35,10 +40,12 @@ public class EffectController : MonoBehaviour
     // 몬스터 죽음 (effect 이름 : vfx_Explosion_01 + 즉시 제거)
     public void TriggerDeathEffect()
     {
+        GameObject effect;
         if (deathEffectPrefab && deathEffectSpawnPoint)
-            Instantiate(deathEffectPrefab, deathEffectSpawnPoint.position, deathEffectSpawnPoint.rotation);
-
-        Destroy(gameObject); // 즉시 제거
+        {
+            effect = Instantiate(deathEffectPrefab, deathEffectSpawnPoint.position, deathEffectSpawnPoint.rotation);
+            Destroy(effect, 1f);
+        }
     }
 
     // 화면 붉게 플래시 효과
