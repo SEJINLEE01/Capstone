@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     public GameObject AttackUI; // 공격 선택 후, 실제로 공격을 하기위한 UI
     public GameObject DefeatUI; // 패배하고나서 이후의 UI
     public GameObject Canvas; // 카드 뽑을 UI
+    public GameObject Tutorial_UI; // 튜토UI
     private GameObject selectedObject; //선택될 몬스터
+    bool tutorial = false; // 튜토리얼 버튼
     bool Attack = false; //공격버튼을 눌렀을 때
     bool Attacking = false; // 실제로 몬스터를 카드로 공격할 때
     bool Draw = false; // 드로우 버튼을 눌렀을 때
@@ -49,8 +51,13 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator GameLoop(){
-        yield return new WaitForSeconds(1.0f); // 일단 스포너 기다리기 위해서 임시로 넣어놓음 튜토리얼추가되면 제거예정 
-        
+        yield return new WaitUntil(() => tutorial);
+
+        for (int i = 0; i < 5; i++) // 기본 드로우 5장
+        {
+            MyDraw.Instance.Draw();
+        }
+
         Canvas.SetActive(true);
         for (int i=0;i<maxTurn;i++){ 
             SelectUI.SetActive(true);
@@ -118,6 +125,7 @@ public class GameManager : MonoBehaviour
         Attack = false; // 매턴이 지나면 bool변수 모두 초기화
         Attacking = false;
         Draw = false;
+        tutorial = false;
     }
 
     void ClearScene()
@@ -257,5 +265,11 @@ public class GameManager : MonoBehaviour
     public void RemoveCard(GameObject card) //카드 세팅빠졌을때 제거
     {
         SettingCard.Remove(card);
+    }
+
+    public void TutorialButton()
+    {
+        tutorial = true;
+        Tutorial_UI.SetActive(false);
     }
 }
