@@ -13,15 +13,17 @@ public abstract class GameMonster : MonoBehaviour
     protected int turnUI;
     public Image HPimg;
     public TextMeshProUGUI Hptxt;
-
+    public EffectController effectController;
 
     // + 공통되는 함수
     public void Attack(){
+        effectController.TriggerAttackEffect();
         GameManager.Instance.Hp = GameManager.Instance.Hp - cohesion;
     }
     
     public void Attacked(int molecular) //카드들의 원자량합을 공격으로 받음
     {
+        effectController.TriggerHitEffect();
         molecular_mass -= molecular;
         Debug.Log("남은 체력은 :" + molecular_mass);
         HPimg.fillAmount = molecular_mass * 1.0f / MaxHp;
@@ -45,6 +47,7 @@ public abstract class GameMonster : MonoBehaviour
     {
         if (molecular_mass <= 0)
         {
+            effectController.TriggerDeathEffect();
             GameManager.Instance.MonsterDie(this.gameObject);
             Destroy(gameObject);
         }
