@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: -1276104406262267657}
   - component: {fileID: 2012023786583141118}
   - component: {fileID: 6745569171930782774}
+  - component: {fileID: -6835210102707247696}
   m_Layer: 3
   m_Name: NaCl_Monster
   m_TagString: NaCl
@@ -747,6 +748,20 @@ MonoBehaviour:
   flashInSpeed: 5
   flashOutSpeed: 2
   maxAlpha: 0.4
+--- !u!114 &-6835210102707247696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901139550369791990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d035f772b6114e24aaf4101641654293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  childCanvasObject: {fileID: 0}
 --- !u!1 &6138714570106687404
 GameObject:
   m_ObjectHideFlags: 0

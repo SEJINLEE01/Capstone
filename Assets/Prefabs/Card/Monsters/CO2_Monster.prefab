@@ -457,6 +457,7 @@ GameObject:
   - component: {fileID: -4820247315776993213}
   - component: {fileID: -8469776041889242890}
   - component: {fileID: 307608540148488012}
+  - component: {fileID: 5286821893785599637}
   m_Layer: 3
   m_Name: CO2_Monster
   m_TagString: CO2
@@ -678,6 +679,20 @@ MonoBehaviour:
   flashInSpeed: 5
   flashOutSpeed: 2
   maxAlpha: 0.4
+--- !u!114 &5286821893785599637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807848400895695203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d035f772b6114e24aaf4101641654293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  childCanvasObject: {fileID: 0}
 --- !u!1 &3245648251694164840
 GameObject:
   m_ObjectHideFlags: 0

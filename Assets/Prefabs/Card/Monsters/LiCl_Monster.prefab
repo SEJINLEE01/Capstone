@@ -756,6 +756,7 @@ GameObject:
   - component: {fileID: -9134701044351408290}
   - component: {fileID: 4836983231454707565}
   - component: {fileID: 1488114695466960725}
+  - component: {fileID: -725294863788701697}
   m_Layer: 3
   m_Name: LiCl_Monster
   m_TagString: LiCl
@@ -972,6 +973,20 @@ MonoBehaviour:
   flashInSpeed: 5
   flashOutSpeed: 2
   maxAlpha: 0.4
+--- !u!114 &-725294863788701697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623481261153972122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d035f772b6114e24aaf4101641654293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  childCanvasObject: {fileID: 0}
 --- !u!1 &7633797497221135758
 GameObject:
   m_ObjectHideFlags: 0

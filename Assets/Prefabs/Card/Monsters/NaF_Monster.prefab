@@ -603,6 +603,7 @@ GameObject:
   - component: {fileID: -2668797213089202358}
   - component: {fileID: 6311614390754910253}
   - component: {fileID: 2048248517766559547}
+  - component: {fileID: 2261348814103788630}
   m_Layer: 3
   m_Name: NaF_Monster
   m_TagString: NaF
@@ -819,6 +820,20 @@ MonoBehaviour:
   flashInSpeed: 5
   flashOutSpeed: 2
   maxAlpha: 0.4
+--- !u!114 &2261348814103788630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5189247621546692102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d035f772b6114e24aaf4101641654293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  childCanvasObject: {fileID: 0}
 --- !u!1 &6497659482549127623
 GameObject:
   m_ObjectHideFlags: 0
