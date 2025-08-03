@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 5871371091699231991}
   - component: {fileID: -4140381632051262501}
   - component: {fileID: 7661327913068400990}
+  - component: {fileID: -4364267179563180419}
   m_Layer: 3
   m_Name: NH3_Monster
   m_TagString: NH3
@@ -372,6 +373,20 @@ MonoBehaviour:
   flashInSpeed: 5
   flashOutSpeed: 2
   maxAlpha: 0.4
+--- !u!114 &-4364267179563180419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329691490058413576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d035f772b6114e24aaf4101641654293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  childCanvasObject: {fileID: 0}
 --- !u!1 &386261175409920403
 GameObject:
   m_ObjectHideFlags: 0

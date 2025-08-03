@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 6265314644403045868}
   - component: {fileID: 4647104175142661186}
   - component: {fileID: 6921257394625265708}
+  - component: {fileID: 2430708005665792672}
   m_Layer: 3
   m_Name: HCl_Monster
   m_TagString: HCl
@@ -424,6 +425,20 @@ MonoBehaviour:
   flashInSpeed: 5
   flashOutSpeed: 2
   maxAlpha: 0.4
+--- !u!114 &2430708005665792672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930627397607183114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d035f772b6114e24aaf4101641654293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  childCanvasObject: {fileID: 0}
 --- !u!1 &1966994737876270133
 GameObject:
   m_ObjectHideFlags: 0

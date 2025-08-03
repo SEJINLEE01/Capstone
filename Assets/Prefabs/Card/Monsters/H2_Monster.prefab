@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: -1835813829076348718}
   - component: {fileID: 8889385806864067707}
   - component: {fileID: 2481335420940081100}
+  - component: {fileID: 3596827954152853471}
   m_Layer: 3
   m_Name: H2_Monster
   m_TagString: H2
@@ -342,6 +343,20 @@ MonoBehaviour:
   flashInSpeed: 5
   flashOutSpeed: 2
   maxAlpha: 0.4
+--- !u!114 &3596827954152853471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548519073945770054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d035f772b6114e24aaf4101641654293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  childCanvasObject: {fileID: 0}
 --- !u!1 &875314634940672380
 GameObject:
   m_ObjectHideFlags: 0
