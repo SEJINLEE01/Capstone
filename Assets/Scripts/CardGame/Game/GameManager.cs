@@ -102,9 +102,26 @@ public class GameManager : MonoBehaviour
     
             yield return new WaitForSeconds(1f);
             Debug.Log("모든 턴이 끝났습니다.");
+
+            if (Monsters.Count == 0 && Spawner.isEmpty())
+            {
+                Debug.Log("Clear");
+                yield break;
+            }
+
             turn++;
         }
-         Debug.Log("게임이 종료되었습니다.");
+
+        if(Monsters.Count==0&& Spawner.isEmpty())
+        {
+            Debug.Log("Clear");
+
+        }
+        else
+        {
+            Debug.Log("Defeat");
+        }
+            Debug.Log("게임이 종료되었습니다.");
     }
     
     void Initialize() // 게임을 완전히 다시리셋

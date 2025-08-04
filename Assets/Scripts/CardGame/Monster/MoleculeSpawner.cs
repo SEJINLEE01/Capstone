@@ -106,4 +106,9 @@ public class MoleculeSpawner : MonoBehaviour
         isSpawned[i] = true;
         return (monster, i);
     }
+
+    public bool isEmpty()
+    {
+        return Monsters.Count == 0;
+    }
 }
