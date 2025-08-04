@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject DefeatUI; // 패배하고나서 이후의 UI
     public GameObject Canvas; // 카드 뽑을 UI
     public GameObject Tutorial_UI; // 튜토UI
+    public GameObject ClearUI; // 클리어 UI
     private GameObject selectedObject; //선택될 몬스터
     bool tutorial = false; // 튜토리얼 버튼
     bool Attack = false; //공격버튼을 눌렀을 때
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
 
             if (Monsters.Count == 0 && Spawner.isEmpty())
             {
+                ClearProcess();
                 Debug.Log("Clear");
                 yield break;
             }
@@ -116,6 +118,7 @@ public class GameManager : MonoBehaviour
 
         if(Monsters.Count==0&& Spawner.isEmpty())
         {
+            ClearProcess();
             Debug.Log("Clear");
 
         }
@@ -142,6 +145,7 @@ public class GameManager : MonoBehaviour
         SelectUI.SetActive(false);
         AttackUI.SetActive(false);
         DefeatUI.SetActive(false);
+        ClearUI.SetActive(false);
         Attack = false; // 매턴이 지나면 bool변수 모두 초기화
         Attacking = false;
         Draw = false;
@@ -169,6 +173,12 @@ public class GameManager : MonoBehaviour
     void DefeatProcess(){ // 몬스터한테 죽었을 경우 실행될 프로세스
         Debug.Log("사망하였습니다"); // 여기서 돌아갈지 다시시작할건지를 나타내는 UI를 띄우는 로직
         DefeatUI.SetActive(true);
+    }
+
+    void ClearProcess()
+    {
+        Debug.Log("클리어");
+        ClearUI.SetActive(true);
     }
 
     public void AttackButton(){ // 어택버튼을 눌렀을 때
