@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
     IEnumerator GameLoop(){
         yield return new WaitUntil(() => tutorial);
 
+        yield return new WaitForSeconds(1f);
+
         for (int i = 0; i < 5; i++) // 기본 드로우 5장
         {
             MyDraw.Instance.Draw();

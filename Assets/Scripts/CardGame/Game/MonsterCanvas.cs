@@ -17,7 +17,7 @@ public class MonsterCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        childCanvasObject.transform.position = (Player.transform.forward * 0.1f);
+        childCanvasObject.transform.position = Player.transform.position + (Player.transform.forward * 0.2f);
         childCanvasObject.transform.rotation = Player.transform.rotation;
     }
 }
