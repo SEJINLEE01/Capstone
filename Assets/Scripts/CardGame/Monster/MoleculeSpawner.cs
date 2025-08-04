@@ -37,6 +37,8 @@ public class MoleculeSpawner : MonoBehaviour
     public void InitialSpawnMonster()
     {
         Monsters.Clear(); // 몬스터가 들어있던 큐 초기화
+        for (int i = 0; i < isSpawned.Length; i++) // 위치 초기화
+            isSpawned[i] = false;
 
         for (int i = 0; i < S; i++)
         {

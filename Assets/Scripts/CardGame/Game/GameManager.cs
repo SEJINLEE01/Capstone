@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            DefeatProcess();
             Debug.Log("Defeat");
         }
             Debug.Log("게임이 종료되었습니다.");
@@ -144,7 +145,6 @@ public class GameManager : MonoBehaviour
         Attack = false; // 매턴이 지나면 bool변수 모두 초기화
         Attacking = false;
         Draw = false;
-        tutorial = false;
     }
 
     void ClearScene()
