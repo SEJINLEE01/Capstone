@@ -28,7 +28,7 @@ public class HP_Update : MonoBehaviour
 
     public void Update()
     {
-        Heart_Canvas.transform.position = Player.transform.position + (Player.transform.forward * 1.0f) + (Player.transform.right*0.6f) + (Player.transform.up*0.3f);
+        Heart_Canvas.transform.position = Player.transform.position + (Player.transform.forward * 1.0f) + (Player.transform.right*0.4f) + (Player.transform.up*0.3f);
         Heart_Canvas.transform.rotation = Player.transform.rotation;
     }
 
